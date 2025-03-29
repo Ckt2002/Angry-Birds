@@ -10,10 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1966493093242762851}
   - component: {fileID: 42919763797725462}
-  - component: {fileID: 8294372093081332247}
   - component: {fileID: 7154178915789042895}
   - component: {fileID: 1408563557980998868}
-  - component: {fileID: 1404594736761997603}
   m_Layer: 0
   m_Name: White Bird
   m_TagString: Player
@@ -91,28 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &8294372093081332247
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767085336385032401}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b10e0c3d748ee9d438902e5afdc11b11, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &7154178915789042895
 Rigidbody2D:
   serializedVersion: 5
@@ -377,18 +353,3 @@ PolygonCollider2D:
       - {x: 1.3399999, y: -4.1349998}
       - {x: 1.52, y: -4.115}
   m_UseDelaunayMesh: 0
---- !u!114 &1404594736761997603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767085336385032401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76b098b431dd0e04cb44baf3dd20ee00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objSpriteRenderer: {fileID: 42919763797725462}
-  objCollider: {fileID: 1408563557980998868}
-  objRigidbody: {fileID: 7154178915789042895}
