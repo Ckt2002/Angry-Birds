@@ -8,6 +8,11 @@ public abstract class BirdController : MonoBehaviour
 
     public Rigidbody2D GetRb2D() => rb2D;
 
+    private void Start()
+    {
+        rb2D.bodyType = RigidbodyType2D.Kinematic;
+    }
+
     public void BirdGetReady()
     {
         // Jump to slingshot

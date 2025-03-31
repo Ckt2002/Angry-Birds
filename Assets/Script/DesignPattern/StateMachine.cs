@@ -14,6 +14,12 @@ public class StateMachine : MonoBehaviour
 
     private void Update()
     {
+        if (currentState == null)
+        {
+            Debug.Log("Current state is null");
+            return;
+        }
+
         if (!hasExecuted)
         {
             currentState.ExecuteOnce();

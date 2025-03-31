@@ -4,11 +4,9 @@
     {
         Normal,
         Triple,
-        Boomerang,
         Bomb,
-        BigBrother,
-        Balloon,
-        Mighty,
-        Rainbow
+        Boomerang,
+        Bomber,
+        Mighty
     }
 }

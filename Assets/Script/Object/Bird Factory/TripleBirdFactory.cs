@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 
 public class TripleBirdFactory : MonoBehaviour, IBirdFactory
 {
@@ -10,9 +9,10 @@ public class TripleBirdFactory : MonoBehaviour, IBirdFactory
     public BirdController[] CreateBird()
     {
         var birdArr = new BirdController[birdNumber];
-        for (int i = 1; i <= birdNumber; i++)
+        for (int i = 0; i < birdNumber; i++)
         {
             birdArr[i] = Instantiate(tripleBirdPrefab, parent).GetComponent<BirdController>();
+            birdArr[i].gameObject.SetActive(false);
         }
 
         return birdArr;
