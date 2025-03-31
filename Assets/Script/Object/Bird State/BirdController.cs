@@ -11,6 +11,7 @@ public abstract class BirdController : MonoBehaviour
     private void Start()
     {
         rb2D.bodyType = RigidbodyType2D.Kinematic;
+        rb2D.simulated = false;
     }
 
     public void BirdGetReady()

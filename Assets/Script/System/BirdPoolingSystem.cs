@@ -13,13 +13,9 @@ public class BirdPoolingSystem : MonoBehaviour
     private void Awake()
     {
         if (Instance == null)
-        {
             Instance = this;
-        }
         else
-        {
             Destroy(this);
-        }
     }
 
     private void Start()
@@ -31,9 +27,7 @@ public class BirdPoolingSystem : MonoBehaviour
     {
         birdDictionary = new Dictionary<EBirdType, BirdController[]>();
         foreach (var birdType in birdTypeToSpawn)
-        {
             CreateBird(birdType);
-        }
     }
 
     private void CreateBird(EBirdType birdType)
@@ -64,5 +58,17 @@ public class BirdPoolingSystem : MonoBehaviour
     private void UpdateDictionary(EBirdType birdType, BirdController[] birdArr)
     {
         birdDictionary.TryAdd(birdType, birdArr);
+    }
+
+    public BirdController GetBirdPool(EBirdType birdType)
+    {
+        if (!birdDictionary.TryGetValue(birdType, out var value))
+            return null;
+
+        foreach (var bird in value)
+            if (!bird.gameObject.activeInHierarchy)
+                return bird;
+
+        return null;
     }
 }

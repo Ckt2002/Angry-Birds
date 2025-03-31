@@ -12,13 +12,12 @@ public class StateMachine : MonoBehaviour
         currentState.Enter();
     }
 
-    private void Update()
+    //! Fix AUpdate here
+    // TODO: previous function name is Update.
+    private void AUpdate()
     {
         if (currentState == null)
-        {
-            Debug.Log("Current state is null");
             return;
-        }
 
         if (!hasExecuted)
         {
