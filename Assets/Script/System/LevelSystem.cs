@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using Script.System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class LevelSystem : MonoBehaviour
 {
     public static LevelSystem Instance;
 
-    [SerializeField] private GetBirdSystem getBirdSystem;
+    [SerializeField] private GetBirdForLevelSystem getBirdSystem;
 
     private Dictionary<byte, byte[]> levelsInfor;
     private byte currentLevel = 1;
@@ -28,7 +27,7 @@ public class LevelSystem : MonoBehaviour
             levelsInfor = new Dictionary<byte, byte[]>();
             await CsvLevelSystem.LoadDataLevelFromCSV(SetLevelDictionary);
 
-            // TODO: this code here is just for text, press level button UI will run this
+            //TODO: this code here is just for text, press level button UI will run this
             SetCurrentLevel(1);
         }
         catch (Exception e)

@@ -1,29 +1,32 @@
 ﻿using System;
+using UnityEngine;
 
 public class BirdLaunchState : IState
 {
-    private BirdController bird;
+    private Rigidbody2D birdRb;
+    private Vector2 launchForce;
 
-    public BirdLaunchState(BirdController bird)
+    public BirdLaunchState(Rigidbody2D birdRb, Vector2 launchForce)
     {
-        this.bird = bird;
+        this.birdRb = birdRb;
+        this.launchForce = launchForce;
     }
 
     public void Enter()
     {
+        birdRb.AddForce(launchForce, ForceMode2D.Impulse);
     }
 
     public void ExecuteOnce()
     {
-        // Run add force
     }
 
     public void ExecuteEveryFrame()
     {
-        // Run Animation
     }
 
     public void Exit()
     {
+        birdRb = null;
     }
 }

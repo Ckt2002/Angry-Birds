@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class StateMachine : MonoBehaviour
+public class BirdStateMachine : MonoBehaviour
 {
     private IState currentState;
     private bool hasExecuted;
@@ -12,9 +13,7 @@ public class StateMachine : MonoBehaviour
         currentState.Enter();
     }
 
-    //! Fix AUpdate here
-    // TODO: previous function name is Update.
-    private void AUpdate()
+    private void Update()
     {
         if (currentState == null)
             return;

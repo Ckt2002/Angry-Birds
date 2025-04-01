@@ -2,6 +2,7 @@
 
 public class BombBirdFactory : MonoBehaviour, IBirdFactory
 {
+    
     [SerializeField] protected int birdNumber = 1;
     [SerializeField] protected Transform parent;
     [SerializeField] protected GameObject bombBirdPrefab;

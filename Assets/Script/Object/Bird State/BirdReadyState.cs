@@ -1,33 +1,32 @@
 ﻿using UnityEngine;
 
-namespace Script.Object.Bird
+public class BirdReadyState : IState
 {
-    public class BirdReadyState : IState
+    private BirdController bird;
+    private Vector2 slingShotReadyPos;
+
+    public BirdReadyState(BirdController bird, Vector2 slingShotReadyPos)
     {
-        private readonly BirdController bird;
-        private Vector2 slingShotReadyPos;
+        this.bird = bird;
+        this.slingShotReadyPos = slingShotReadyPos;
+    }
 
-        public BirdReadyState(BirdController bird, Vector2 slingShotReadyPos)
-        {
-            this.bird = bird;
-            this.slingShotReadyPos = slingShotReadyPos;
-        }
+    public void Enter()
+    {
+        bird.GetRb2D().simulated = true;
+    }
 
-        public void Enter()
-        {
-            // Get to slingshot position
-        }
+    public void ExecuteOnce()
+    {
+    }
 
-        public void ExecuteOnce()
-        {
-        }
+    public void ExecuteEveryFrame()
+    {
+        bird.transform.position = Vector2.Lerp(bird.transform.position, slingShotReadyPos, Time.deltaTime * 2);
+    }
 
-        public void ExecuteEveryFrame()
-        {
-        }
-
-        public void Exit()
-        {
-        }
+    public void Exit()
+    {
+        bird = null;
     }
 }

@@ -1,12 +1,14 @@
 ﻿using System;
+using Script.Object.Bird;
 using UnityEngine;
 
 public abstract class BirdController : MonoBehaviour
 {
-    [SerializeField] private StateMachine stateMachine;
+    [SerializeField] private BirdStateMachine stateMachine;
     [SerializeField] private Rigidbody2D rb2D;
 
     public Rigidbody2D GetRb2D() => rb2D;
+    public Action disableAction;
 
     private void Start()
     {
@@ -14,20 +16,25 @@ public abstract class BirdController : MonoBehaviour
         rb2D.simulated = false;
     }
 
-    public void BirdGetReady()
+    public void BirdGetReadyState(Vector2 readyPos)
     {
-        // Jump to slingshot
-        // Run rotate animation
+        stateMachine.ChangeState(new BirdReadyState(this, readyPos));
     }
 
-    public void BirdFly()
+    public void BirdDragState()
     {
-        // Calculate force
+        stateMachine.ChangeState(new BirdDragState(this));
+    }
+
+    public void BirdLaunchState(Vector2 launchForce)
+    {
+        stateMachine.ChangeState(new BirdLaunchState(rb2D, launchForce));
     }
 
 
     private void OnCollisionEnter(Collision other)
     {
+        stateMachine.ChangeState(new BirdColliedState(this, disableAction));
     }
 
     protected virtual void OnMouseDown()
@@ -37,5 +44,6 @@ public abstract class BirdController : MonoBehaviour
 
     protected virtual void SpecialSkill()
     {
+        // override in children
     }
 }

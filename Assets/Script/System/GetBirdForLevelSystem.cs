@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Script.System
 {
-    public class GetBirdSystem : MonoBehaviour
+    public class GetBirdForLevelSystem : MonoBehaviour
     {
         private Vector2 birdSpawnPos;
         [SerializeField] private BirdPoolingSystem birdPoolingSystem;
-        [SerializeField] private SlingshotSystem slingshotSystem;
+        [SerializeField] private BirdProviderSystem slingshotSystem;
 
         public void LoadBirdsInLevel(byte[] birdTypes)
         {

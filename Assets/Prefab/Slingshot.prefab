@@ -463,6 +463,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7675895062662169693}
+  - component: {fileID: 2701435658747054315}
+  - component: {fileID: 4453441253158730906}
+  - component: {fileID: 4377658917728661684}
+  - component: {fileID: 5800075474226191120}
   m_Layer: 0
   m_Name: Slingshot
   m_TagString: Untagged
@@ -488,6 +492,66 @@ Transform:
   - {fileID: 1879123203783363593}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2701435658747054315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306224612548741355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009e811379874de88dc042930e0c79f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  readyTransform: {fileID: 1879123203783363593}
+  maxTension: 10
+  launchForce: 10
+  ropeVisual: {fileID: 4453441253158730906}
+  inputHandler: {fileID: 4377658917728661684}
+  launcher: {fileID: 5800075474226191120}
+--- !u!114 &4453441253158730906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306224612548741355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9661b9962cde4cc4c8b8ab700b0e46cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos:
+  - {fileID: 1527995596250578248}
+  - {fileID: 5070378550200673747}
+  lineRenderers:
+  - {fileID: 7791309209175810441}
+  - {fileID: 380068437825164111}
+--- !u!114 &4377658917728661684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306224612548741355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8f1edc42791ca4aad25ecc3e22f377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5800075474226191120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306224612548741355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8046a9e40b637414e96d3b521d4ae90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9070881760914055797
 GameObject:
   m_ObjectHideFlags: 0

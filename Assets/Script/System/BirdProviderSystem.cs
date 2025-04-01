@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class SlingshotSystem : MonoBehaviour
+public class BirdProviderSystem : MonoBehaviour
 {
-    public static SlingshotSystem Instance { get; private set; }
+    public static BirdProviderSystem Instance { get; private set; }
 
     private Queue<BirdController> birdsInQueue;
 
@@ -26,10 +25,8 @@ public class SlingshotSystem : MonoBehaviour
         birdsInQueue.Enqueue(bird);
     }
 
-    public int QueueCount => birdsInQueue.Count;
-
-    public void GetBirdFromQueue()
+    public BirdController GetBirdFromQueue()
     {
-        birdsInQueue.Dequeue();
+        return birdsInQueue.Dequeue();
     }
 }
