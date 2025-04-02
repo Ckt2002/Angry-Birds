@@ -1,6 +1,3 @@
-﻿namespace Script.Object.BirdType
+﻿public class NormalBird : BirdController
 {
-    public class NormalBird : BirdController
-    {
-    }
 }

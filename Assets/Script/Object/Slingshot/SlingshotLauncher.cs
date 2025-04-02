@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class SlingshotLauncher : MonoBehaviour
 {
-    private float maxTension;
-    private float launchForce;
+
+    [SerializeField] private float maxTension = 10f;
+    [SerializeField] private float launchForce = 5f;
     private Vector2 readyPos;
 
-    public void SetValues(float maxTension, float launchForce, Vector2 readyPos)
+    public void SetValues(Vector2 readyPos)
     {
-        this.maxTension = maxTension;
-        this.launchForce = launchForce;
         this.readyPos = readyPos;
     }
 

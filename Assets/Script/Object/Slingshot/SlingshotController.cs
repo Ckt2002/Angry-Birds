@@ -1,10 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
-public class SlingshotController : MonoBehaviour, IBirdReleaser
+public class SlingshotController : MonoBehaviour
 {
     [SerializeField] private Transform readyTransform;
-    [SerializeField] private float maxTension;
-    [SerializeField] private float launchForce = 10;
     [SerializeField] private SlingshotRopeVisual ropeVisual;
     [SerializeField] private SlingshotInputHandler inputHandler;
     [SerializeField] private SlingshotLauncher launcher;
@@ -22,7 +21,7 @@ public class SlingshotController : MonoBehaviour, IBirdReleaser
 
         inputHandler.OnDragAction += DragBird;
         inputHandler.OnReleaseAction += LaunchBird;
-        launcher.SetValues(maxTension, launchForce, readyPos);
+        launcher.SetValues(readyPos);
     }
 
     void Update()
@@ -30,8 +29,8 @@ public class SlingshotController : MonoBehaviour, IBirdReleaser
         if (currentBird == null)
         {
             currentBird = GetNexBird();
-            currentBird.disableAction += ReleaseBird;
-            currentBird.BirdGetReadyState(readyPos);
+            if (currentBird != null)
+                currentBird.BirdGetReadyState(readyPos);
         }
     }
 
@@ -44,42 +43,31 @@ public class SlingshotController : MonoBehaviour, IBirdReleaser
 
     private void DragBird()
     {
-        #region Calculate
+        if (currentBird == null)
+            return;
+
         Vector2 mousePos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
-        var direction = (readyPos - mousePos).normalized;
-        var distance = Vector2.Distance(mousePos, readyPos);
-        distance = Mathf.Min(distance, maxTension);
-
         currentBird.BirdDragState();
-        currentBird.transform.position = readyPos - direction * distance;
-        #endregion
-
-        #region Call function
+        currentBird.transform.position = launcher.CalculateBirdPosition(mousePos);
         ropeVisual.UpdateRope(currentBird.transform.position);
-        #endregion
     }
 
     private void LaunchBird()
     {
-        #region Calculate
+        if (currentBird == null)
+            return;
         Vector2 birdPos = currentBird.transform.position;
-        var direction = (readyPos - birdPos).normalized;
-        var tension = Vector2.Distance(readyPos, birdPos);
+        var launchForceFinal = launcher.CalculateLaunchForce(birdPos);
         var birdComponent = currentBird.GetComponent<BirdController>();
-        #endregion
-
-        #region Call function
-        birdComponent.BirdLaunchState(direction * tension * launchForce);
+        birdComponent.BirdLaunchState(launchForceFinal);
         ropeVisual.ResetRope();
-        #endregion
+        StartCoroutine(nameof(DisableCurrentBird));
     }
 
-    public void ReleaseBird()
+    private IEnumerator DisableCurrentBird()
     {
+        yield return new WaitForSeconds(2f);
         if (currentBird != null)
-        {
-            currentBird.disableAction -= ReleaseBird;
             currentBird = null;
-        }
     }
 }

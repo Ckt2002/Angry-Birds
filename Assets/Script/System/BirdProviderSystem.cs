@@ -27,6 +27,14 @@ public class BirdProviderSystem : MonoBehaviour
 
     public BirdController GetBirdFromQueue()
     {
-        return birdsInQueue.Dequeue();
+        if (birdsInQueue.Count == 0)
+            return null;
+
+        var birdToGet = birdsInQueue.Dequeue();
+        foreach (var bird in birdsInQueue)
+        {
+            bird.MoveInLineState();
+        }
+        return birdToGet;
     }
 }

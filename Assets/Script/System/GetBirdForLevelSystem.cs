@@ -21,6 +21,7 @@ namespace Script.System
             {
                 EBirdType type = (EBirdType)birdType;
 
+                //TODO: Change the spawn pos here
                 var bird = birdPoolingSystem.GetBirdPool(type);
                 bird.gameObject.SetActive(true);
                 var offSet = posCount * 2 + 2;
