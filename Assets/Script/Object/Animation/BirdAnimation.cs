@@ -1,25 +1,30 @@
 using UnityEngine;
 
-public class BirdAnimation : MonoBehaviour
+public class BirdAnimation : MonoBehaviour, IBirdAnim
 {
-    [SerializeField] private Animator animator;
+    private Animator animator;
 
-    public void Idle()
+    private void Start()
     {
-        animator.SetTrigger(nameof(EBirdAnimationName.Idle));
+        animator = GetComponent<Animator>();
     }
 
-    public void Launching()
-    {
-        animator.SetTrigger(nameof(EBirdAnimationName.Launching));
-    }
-
-    public void Collied()
+    public void RunCollied()
     {
         animator.SetTrigger(nameof(EBirdAnimationName.Collied));
     }
 
-    public void SpecialSkill()
+    public void RunLaunch()
+    {
+        animator.SetTrigger(nameof(EBirdAnimationName.Launching));
+    }
+
+    public void RunIdle()
+    {
+        animator.SetTrigger(nameof(EBirdAnimationName.Idle));
+    }
+
+    public void RunSpecialSkill()
     {
         animator.SetTrigger(nameof(EBirdAnimationName.SpecialSkill));
     }

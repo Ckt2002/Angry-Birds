@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Obstacle
-  - Round
+  - Ground
   layers:
   - Default
   - TransparentFX

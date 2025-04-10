@@ -3,5 +3,5 @@
     Player,
     Enemy,
     Obstacle,
-    Round
+    Ground
 }
