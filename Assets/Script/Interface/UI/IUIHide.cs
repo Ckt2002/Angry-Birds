@@ -1,4 +1,6 @@
+using System;
+
 public interface IUIHide
 {
-    void HideUI();
+    void HideUI(Action action);
 }
