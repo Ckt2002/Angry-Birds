@@ -40,12 +40,12 @@ public class BirdPoolingSystem : MonoBehaviour
 
             case EBirdType.Triple:
                 var tripleBirds = birdFactories[1].Factory.CreateBird();
-                UpdateDictionary(EBirdType.Normal, tripleBirds);
+                UpdateDictionary(EBirdType.Triple, tripleBirds);
                 break;
 
             case EBirdType.Bomb:
                 var bombBirds = birdFactories[2].Factory.CreateBird();
-                UpdateDictionary(EBirdType.Normal, bombBirds);
+                UpdateDictionary(EBirdType.Bomb, bombBirds);
                 break;
 
             default:
@@ -62,12 +62,16 @@ public class BirdPoolingSystem : MonoBehaviour
     public BirdController GetBirdPool(EBirdType birdType)
     {
         if (!birdDictionary.TryGetValue(birdType, out var value))
+        {
+            Debug.LogWarning($"{birdType} bird not found in dictionary");
             return null;
+        }
 
         foreach (var bird in value)
             if (!bird.gameObject.activeInHierarchy)
                 return bird;
 
+        Debug.LogWarning($"{birdType} bird out of number");
         return null;
     }
 }

@@ -2,9 +2,9 @@
 {
     public enum EBirdType
     {
-        Normal,
-        Triple,
-        Bomb,
+        Normal = 0,
+        Triple = 1,
+        Bomb = 2,
         Boomerang,
         Bomber,
         Mighty

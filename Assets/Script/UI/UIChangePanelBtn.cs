@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class UIChangePanelBtn : MonoBehaviour, IUIChangePanelBtn
 {
-    [SerializeField] private EUIType UIType;
+    [SerializeField] private EUIType UITypeToChange;
 
     private Button button;
 
@@ -19,7 +19,6 @@ public class UIChangePanelBtn : MonoBehaviour, IUIChangePanelBtn
 
     public void ChangeUIType()
     {
-        Debug.Log("Clicked");
-        UIManager.Instance.ChangeUIType(UIType);
+        UIManager.Instance?.ChangeUIType(UITypeToChange);
     }
 }

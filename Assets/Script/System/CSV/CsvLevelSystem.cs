@@ -18,7 +18,7 @@ public class CsvLevelSystem : MonoBehaviour
 
         string[] lines = csvData.text.Split('\n');
 
-        for (int i = 2; i < 3; i++) // First line is note, second line is column title
+        for (int i = 2; i < 7; i++) // First line is note, second line is column title
         {
             if (string.IsNullOrEmpty(lines[i])) continue;
 

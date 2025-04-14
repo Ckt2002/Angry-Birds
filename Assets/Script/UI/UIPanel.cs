@@ -2,37 +2,43 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 
-public class UIPanel : MonoBehaviour, IUIShow, IUIHide
+public class UIPanel : MonoBehaviour
 {
     [SerializeField] private EUIType UIType;
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private float duration = 3f;
     [SerializeField] private Vector2 hidePos;
 
-    private void Awake()
-    {
-        UIManager.Instance.OnUIChange += HandleUITypeChanged;
-    }
-
-    private void HandleUITypeChanged(EUIType newType, Action action)
+    public void HandleUITypeChanged(EUIType newType, Action closeGeneralPanelAct, Action<UIPanel> updateStackAct)
     {
         if (newType == UIType)
-            ShowUI();
+            ShowUI(updateStackAct);
         else
-            HideUI(action);
+            HideUI(closeGeneralPanelAct);
     }
 
-    public void HideUI(Action action)
+    public void HideUI(Action closeGeneralPanelAct)
     {
-        rectTransform.DOLocalMove(hidePos, duration)
-        .SetEase(Ease.InSine)
-        .OnComplete(() => { gameObject.SetActive(false); action?.Invoke(); });
+        rectTransform.DOLocalMove(hidePos, 0.5f)
+            .SetEase(Ease.InSine)
+            .SetLink(gameObject)
+            .OnComplete(() =>
+            {
+                gameObject.SetActive(false);
+                closeGeneralPanelAct?.Invoke();
+            });
     }
 
-    public void ShowUI()
+    public void ShowUI(Action<UIPanel> updateStackAct)
     {
         gameObject.SetActive(true);
         rectTransform.localPosition = hidePos;
-        rectTransform.DOLocalMove(Vector2.zero, duration);
+        rectTransform.DOLocalMove(Vector2.zero, duration)
+            .SetLink(gameObject)
+            .OnComplete(
+            () =>
+            {
+                updateStackAct?.Invoke(this);
+            });
     }
 }
