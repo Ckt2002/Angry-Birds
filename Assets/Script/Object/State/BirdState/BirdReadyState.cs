@@ -13,7 +13,7 @@ public class BirdReadyState : IBirdState
 
     public void Enter()
     {
-        bird.GetRb2D().simulated = true;
+        bird.rb2D.simulated = true;
     }
 
     public void ExecuteOnce()

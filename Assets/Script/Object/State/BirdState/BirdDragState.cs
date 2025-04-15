@@ -11,7 +11,7 @@ public class BirdDragState : IBirdState
 
     public void Enter()
     {
-        bird.GetRb2D().bodyType = RigidbodyType2D.Kinematic;
+        bird.rb2D.bodyType = RigidbodyType2D.Kinematic;
     }
 
     public void ExecuteOnce()

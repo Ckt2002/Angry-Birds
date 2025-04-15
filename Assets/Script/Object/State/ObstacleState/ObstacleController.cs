@@ -5,6 +5,12 @@ public class ObstacleController : MonoBehaviour
     public EObstacleType obstacleType;
 
     private ObstacleStateMachine stateMachine;
+    private Rigidbody2D rb2D;
+
+    private void Awake()
+    {
+        rb2D = GetComponent<Rigidbody2D>();
+    }
 
     private void Start()
     {
@@ -15,5 +21,16 @@ public class ObstacleController : MonoBehaviour
     {
         if (other.relativeVelocity.magnitude >= GameStat.Instance.velocityThreshold)
             stateMachine.ChangeState(new ObstacleColliedState(this));
+    }
+
+    public void ObstacleExplosionState(float explosiveDistance, float explosionForce, Vector2 direction)
+    {
+        if (explosiveDistance <= 0)
+        {
+            stateMachine?.ChangeState(new ObstacleColliedState(this));
+            return;
+        }
+        else if (explosiveDistance > 0 && explosiveDistance <= 4f)
+            stateMachine?.ChangeState(new ObstatcleExplosionState(rb2D, explosionForce, direction));
     }
 }

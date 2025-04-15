@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,18 +18,23 @@ public class ParticlePoolingSystem : MonoBehaviour
 
     private void Start()
     {
-        InitializeBirds();
+        StartCoroutine(InitializeBirds());
     }
 
-    private void InitializeBirds()
+    private IEnumerator InitializeBirds()
     {
         particleDictionary = new Dictionary<string, ParticleController[]>();
 
         foreach (var factory in particleFactories)
         {
             var spawned = factory.Factory.CreateParticle();
-            var key = spawned[0].gameObject.name.Replace("(Clone)", "");
-            particleDictionary.TryAdd(key, spawned);
+            foreach (var item in spawned)
+            {
+                var key = item[0].gameObject.name.Replace("(Clone)", "");
+                particleDictionary.TryAdd(key, item);
+                yield return new WaitForSeconds(0.0002f);
+            }
+            yield return new WaitForSeconds(0.002f);
         }
     }
 

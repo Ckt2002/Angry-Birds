@@ -582,4 +582,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTension: 2
-  launchForce: 450
+  launchForce: 400

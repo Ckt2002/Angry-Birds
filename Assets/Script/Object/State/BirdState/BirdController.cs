@@ -3,25 +3,34 @@ using UnityEngine;
 
 public abstract class BirdController : MonoBehaviour
 {
-    private BirdStateMachine stateMachine;
-    private Rigidbody2D rb2D;
-    private IBirdAnim anim;
-    private bool launched = false;
-    private new string name;
-
-
+    public bool skillActive = false;
+    public bool launched = false;
     public EBirdType birdType;
-    public Rigidbody2D GetRb2D() => rb2D;
+    public Rigidbody2D rb2D;
 
-    private void Start()
+    protected BirdStateMachine stateMachine;
+    protected IBirdAnim anim;
+    protected new string name;
+
+    private void Awake()
     {
         stateMachine = GetComponent<BirdStateMachine>();
         rb2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<IBirdAnim>();
+    }
 
-        name = gameObject.name.Replace("(Clone)", "");
-        rb2D.bodyType = RigidbodyType2D.Kinematic;
-        rb2D.simulated = false;
+    private void OnEnable()
+    {
+        Reset();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && launched && !skillActive)
+        {
+            SpecialSkill();
+            skillActive = true;
+        }
     }
 
     public void MoveInLineState()
@@ -36,12 +45,14 @@ public abstract class BirdController : MonoBehaviour
 
     public void BirdDragState()
     {
-        stateMachine.ChangeState(new BirdDragState(this));
+        if (!launched)
+            stateMachine.ChangeState(new BirdDragState(this));
     }
 
     public void BirdLaunchState(Vector2 launchForce)
     {
-        stateMachine.ChangeState(new BirdLaunchState(rb2D, launchForce, anim, () => launched = true));
+        if (!launched)
+            stateMachine.ChangeState(new BirdLaunchState(rb2D, launchForce, anim, () => launched = true));
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -50,13 +61,17 @@ public abstract class BirdController : MonoBehaviour
             stateMachine.ChangeState(new BirdColliedState(this, anim, name));
     }
 
-    protected virtual void OnMouseDown()
+    protected void Reset()
     {
-        SpecialSkill();
+        name = gameObject.name.Replace("(Clone)", "");
+        rb2D.bodyType = RigidbodyType2D.Kinematic;
+        rb2D.simulated = false;
+        skillActive = false;
+        launched = false;
+        transform.localRotation = Quaternion.Euler(Vector3.zero);
     }
 
     protected virtual void SpecialSkill()
     {
-        // override in children
     }
 }

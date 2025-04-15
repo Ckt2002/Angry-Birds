@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using Script.System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LevelSystem : MonoBehaviour
 {
     public static LevelSystem Instance;
 
     [Min(1), SerializeField] private int level;
-    [SerializeField] private bool isTesting;
 
     private void Awake()
     {
@@ -20,15 +16,13 @@ public class LevelSystem : MonoBehaviour
 
     private void Start()
     {
-        if (!isTesting)
-            LoadLevel();
+        LoadLevel();
     }
 
     [ContextMenu("LoadLevel")]
     public void Load()
     {
-        if (isTesting)
-            LoadLevel();
+        LoadLevel();
     }
 
     public void LoadLevel()

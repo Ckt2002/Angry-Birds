@@ -1,4 +1,6 @@
+using System.Collections.Generic;
+
 public interface IParticleFactory
 {
-    public ParticleController[] CreateParticle();
+    public List<ParticleController[]> CreateParticle();
 }

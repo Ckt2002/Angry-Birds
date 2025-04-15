@@ -220,7 +220,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 939179debb9e4683984eab2f7d52d44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillActive: 0
+  launched: 0
   birdType: 0
+  rb2D: {fileID: 0}
 --- !u!114 &7460053359088236897
 MonoBehaviour:
   m_ObjectHideFlags: 0

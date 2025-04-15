@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6977359513256140308}
   - component: {fileID: 2383414044731124512}
+  - component: {fileID: 4769161633632186521}
   - component: {fileID: 1581569629331652567}
   - component: {fileID: 6055639328296110651}
   - component: {fileID: -5872297835787751622}
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.12, y: -6.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -121473489, guid: 84f5a1bcffb5a804d95afa5841c27c43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -92,6 +93,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4769161633632186521
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7793065481051538347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 15fe208d375e4ce4ca64f8aff00f5d47, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &1581569629331652567
 Rigidbody2D:
   serializedVersion: 5
@@ -198,7 +221,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 902416680be0434982906b07a532dbb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillActive: 0
+  launched: 0
   birdType: 2
+  rb2D: {fileID: 0}
+  explodeRange: 5
+  explosionForce: 10
 --- !u!114 &509910944833445732
 MonoBehaviour:
   m_ObjectHideFlags: 0

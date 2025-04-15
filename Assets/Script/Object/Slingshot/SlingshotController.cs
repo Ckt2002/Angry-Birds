@@ -47,9 +47,12 @@ public class SlingshotController : MonoBehaviour
             return;
 
         Vector2 mousePos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
+        //if (mousePos == (Vector2)currentBird.transform.position)
+        //{
         currentBird.BirdDragState();
         currentBird.transform.position = launcher.CalculateBirdPosition(mousePos);
         ropeVisual.UpdateRope(currentBird.transform.position);
+        //}
     }
 
     private void LaunchBird()
@@ -61,7 +64,8 @@ public class SlingshotController : MonoBehaviour
         var birdComponent = currentBird.GetComponent<BirdController>();
         birdComponent.BirdLaunchState(launchForceFinal);
         ropeVisual.ResetRope();
-        StartCoroutine(nameof(DisableCurrentBird));
+        currentBird = null;
+        //StartCoroutine(nameof(DisableCurrentBird));
     }
 
     private IEnumerator DisableCurrentBird()
