@@ -10,7 +10,6 @@ namespace Script.Object.BirdType
 
         protected override void SpecialSkill()
         {
-            Debug.Log("Bomb active");
             BirdStopMoving();
 
             StartCoroutine(HandleSpecialSkill());

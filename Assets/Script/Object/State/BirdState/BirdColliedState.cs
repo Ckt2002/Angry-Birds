@@ -21,7 +21,7 @@ public class BirdColliedState : IBirdState
         if (particlePoolingSystem == null)
             particlePoolingSystem = ParticlePoolingSystem.Instance;
 
-        anim.RunCollied();
+        anim?.RunCollied();
         coroutine = bird.StartCoroutine(WaitAndDisable(5f));
     }
 

@@ -34,17 +34,22 @@ public class BirdPoolingSystem : MonoBehaviour
         switch (birdType)
         {
             case EBirdType.Normal:
-                var normalBirds = birdFactories[0].Factory.CreateBird();
+                var normalBirds = birdFactories[(int)birdType].Factory.CreateBird();
                 UpdateDictionary(EBirdType.Normal, normalBirds);
                 break;
 
+            case EBirdType.Flash:
+                var flashBirds = birdFactories[(int)birdType].Factory.CreateBird();
+                UpdateDictionary(EBirdType.Flash, flashBirds);
+                break;
+
             case EBirdType.Triple:
-                var tripleBirds = birdFactories[1].Factory.CreateBird();
+                var tripleBirds = birdFactories[(int)birdType].Factory.CreateBird();
                 UpdateDictionary(EBirdType.Triple, tripleBirds);
                 break;
 
             case EBirdType.Bomb:
-                var bombBirds = birdFactories[2].Factory.CreateBird();
+                var bombBirds = birdFactories[(int)birdType].Factory.CreateBird();
                 UpdateDictionary(EBirdType.Bomb, bombBirds);
                 break;
 

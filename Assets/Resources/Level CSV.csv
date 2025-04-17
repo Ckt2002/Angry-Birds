@@ -1,7 +1,7 @@
-"Bird type: normal - 0, triple - 1, bomb - 2",
+"Bird type: normal - 0, flash - 1, triple - 2, bomb - 3",
 Level,Birds
 1,"0, 0, 0, 0"
 2,"0, 0, 0, 0"
-3,"2, 2"
+3,"0, 0, 1, 1"
 4,"0, 0, 1, 1"
 5,"0, 0, 1, 0, 1"

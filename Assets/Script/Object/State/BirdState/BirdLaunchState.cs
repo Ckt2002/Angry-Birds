@@ -18,7 +18,7 @@ public class BirdLaunchState : IBirdState
 
     public void Enter()
     {
-        anim.RunLaunch();
+        anim?.RunLaunch();
         birdRb.bodyType = RigidbodyType2D.Dynamic;
         birdRb.AddForce(launchForce);
         action.Invoke();

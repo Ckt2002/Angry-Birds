@@ -2283,6 +2283,7 @@ MonoBehaviour:
   parent: {fileID: 1642615653}
   particlePrefabs:
   - {fileID: 4952962682095609407, guid: b89080095e10f934193952cb3b81acac, type: 3}
+  - {fileID: 4952962682095609407, guid: 4a872f94fa37b9344ad8f95eb9232f8f, type: 3}
   - {fileID: 4750594967744122251, guid: ba181558ff3ad81478a82cfd96213370, type: 3}
   - {fileID: 4750594967744122251, guid: 0bc49988c7ed30e41a30e7c187b17689, type: 3}
 --- !u!114 &275428938
@@ -2514,9 +2515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b7c932ab3d48fc87dedc4a9e029ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdTypeToSpawn: 000000000100000002000000
+  birdTypeToSpawn: 00000000010000000200000003000000
   birdFactories:
   - factoryObject: {fileID: 2087004186}
+  - factoryObject: {fileID: 2087004188}
   - factoryObject: {fileID: 2087004185}
   - factoryObject: {fileID: 2087004187}
 --- !u!114 &309091958
@@ -16902,6 +16904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2087004184}
+  - component: {fileID: 2087004188}
   - component: {fileID: 2087004186}
   - component: {fileID: 2087004185}
   - component: {fileID: 2087004187}
@@ -16972,6 +16975,21 @@ MonoBehaviour:
   birdNumber: 5
   parent: {fileID: 1036469210}
   bombBirdPrefab: {fileID: 7793065481051538347, guid: f967fe7a4dec0724aa47161d307c21f6, type: 3}
+--- !u!114 &2087004188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087004183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86258c7eda579304887c118704e123b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdNumber: 10
+  parent: {fileID: 1036469210}
+  bombBirdPrefab: {fileID: 1023962960619234659, guid: 730216abf37e5534686955a928712784, type: 3}
 --- !u!1 &2104178652
 GameObject:
   m_ObjectHideFlags: 0
