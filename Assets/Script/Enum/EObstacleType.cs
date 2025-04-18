@@ -4,8 +4,6 @@ public enum EObstacleType
     Square1,
     Square2,
     Square3,
-    Square4,
-    Square5,
     #endregion
 
     #region Circle
@@ -20,8 +18,6 @@ public enum EObstacleType
     Triangle1,
     Triangle2,
     Triangle3,
-    Triangle4,
-    Triangle5,
     #endregion
 
     #region Rectangle

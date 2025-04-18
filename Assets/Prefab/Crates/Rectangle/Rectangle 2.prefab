@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a349b820ec17f4b9016054d82d515d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleType: 16
+  obstacleType: 2
 --- !u!114 &7264206563400895051
 MonoBehaviour:
   m_ObjectHideFlags: 0

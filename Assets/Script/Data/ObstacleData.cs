@@ -6,4 +6,5 @@ public class ObstacleData
 {
     public EObstacleType obstacleType;
     public Vector2 position;
+    public Quaternion rotation;
 }

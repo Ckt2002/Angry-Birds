@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class LoadMapSystem : MonoBehaviour
@@ -25,6 +24,7 @@ public class LoadMapSystem : MonoBehaviour
             var index = obstacle.obstacleType;
             var obj = Instantiate(obstaclesObj.obstaclePrefabs[(int)index], obstacleParent);
             obj.transform.position = obstacle.position;
+            //obj.transform.rotation = obstacle.rotation;
         }
 
         foreach (var enemy in levelData.enemies)

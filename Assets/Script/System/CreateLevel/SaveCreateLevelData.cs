@@ -41,7 +41,8 @@ public class SaveCreateLevelData : MonoBehaviour
                 new ObstacleData
                 {
                     obstacleType = obstacle.obstacleType,
-                    position = obstacle.transform.position
+                    position = obstacle.transform.position,
+                    rotation = obstacle.transform.rotation,
                 }
             );
         }
