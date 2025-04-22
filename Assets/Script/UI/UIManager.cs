@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public Action<EUIType, Action, Action<UIPanel>> OnUIChange;
     public Action OnCloseAllUI;
 
+    [SerializeField] private GameObject inGameMenuPanel;
     private IUIHide generalPanel;
     private Stack<UIPanel> panelStack;
 
@@ -30,6 +31,11 @@ public class UIManager : MonoBehaviour
         Transform panelTransform = (generalPanel as Component)?.transform;
         foreach (Transform child in panelTransform)
             OnUIChange += child.GetComponent<UIPanel>().HandleUITypeChanged;
+    }
+
+    public void ShowInGameMenuPanel()
+    {
+        inGameMenuPanel?.SetActive(true);
     }
 
     public void ChangeUIType(EUIType newType)

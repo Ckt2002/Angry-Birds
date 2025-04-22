@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class BirdDragState : IBirdState
+﻿public class BirdDragState : IBirdState
 {
     private BirdController bird;
 
@@ -11,7 +9,7 @@ public class BirdDragState : IBirdState
 
     public void Enter()
     {
-        bird.rb2D.bodyType = RigidbodyType2D.Kinematic;
+        //bird.rb2D.bodyType = RigidbodyType2D.Kinematic;
     }
 
     public void ExecuteOnce()

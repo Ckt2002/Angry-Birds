@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BirdProviderSystem : MonoBehaviour
@@ -6,6 +6,7 @@ public class BirdProviderSystem : MonoBehaviour
     public static BirdProviderSystem Instance { get; private set; }
 
     private Queue<BirdController> birdsInQueue;
+    private int currentIndex = 0;
 
     private void Awake()
     {
@@ -15,14 +16,22 @@ public class BirdProviderSystem : MonoBehaviour
             Destroy(this);
     }
 
-    private void Start()
+    public void InitializationBirdQueue()
     {
-        birdsInQueue = new Queue<BirdController>();
+        birdsInQueue = new();
     }
 
     public void AddBirdToQueue(BirdController bird)
     {
-        birdsInQueue.Enqueue(bird);
+        if (bird != null && birdsInQueue != null)
+        {
+            birdsInQueue.Enqueue(bird);
+        }
+    }
+
+    public void ResetIndex()
+    {
+        currentIndex = 0;
     }
 
     public BirdController GetBirdFromQueue()
@@ -30,11 +39,9 @@ public class BirdProviderSystem : MonoBehaviour
         if (birdsInQueue.Count == 0)
             return null;
 
-        var birdToGet = birdsInQueue.Dequeue();
         foreach (var bird in birdsInQueue)
-        {
             bird.MoveInLineState();
-        }
-        return birdToGet;
+
+        return birdsInQueue.Dequeue();
     }
 }

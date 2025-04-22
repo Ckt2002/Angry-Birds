@@ -1,27 +1,22 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BirdLaunchState : IBirdState
 {
     private Rigidbody2D birdRb;
     private Vector2 launchForce;
-    private Action action;
     private IBirdAnim anim;
 
-    public BirdLaunchState(Rigidbody2D birdRb, Vector2 launchForce, IBirdAnim anim, Action action)
+    public BirdLaunchState(Rigidbody2D birdRb, Vector2 launchForce, IBirdAnim anim)
     {
         this.birdRb = birdRb;
         this.launchForce = launchForce;
         this.anim = anim;
-        this.action = action;
     }
 
     public void Enter()
     {
-        anim?.RunLaunch();
         birdRb.bodyType = RigidbodyType2D.Dynamic;
-        birdRb.AddForce(launchForce);
-        action.Invoke();
+        birdRb.AddForce(launchForce, ForceMode2D.Impulse);
     }
 
     public void ExecuteOnce()
@@ -35,6 +30,5 @@ public class BirdLaunchState : IBirdState
     public void Exit()
     {
         birdRb = null;
-        action = null;
     }
 }

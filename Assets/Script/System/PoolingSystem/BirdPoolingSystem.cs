@@ -68,7 +68,7 @@ public class BirdPoolingSystem : MonoBehaviour
     {
         if (!birdDictionary.TryGetValue(birdType, out var value))
         {
-            Debug.LogWarning($"{birdType} bird not found in dictionary");
+            Debug.LogWarning($"Bird type: {birdType} not found in dictionary");
             return null;
         }
 

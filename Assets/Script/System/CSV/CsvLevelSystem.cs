@@ -18,19 +18,21 @@ public class CsvLevelSystem : MonoBehaviour
 
         string[] lines = csvData.text.Split('\n');
 
-        for (int i = 2; i < 7; i++) // First line is note, second line is column title
+        for (int i = 2; i < 7; i++)
         {
             if (string.IsNullOrEmpty(lines[i])) continue;
 
-            string birdsStr = lines[i].Replace('"', ' ').Replace(", ", " ").Trim();
+            string birdsStr = lines[i].Replace('"', ' ').Replace(", ", " ").Replace(",", " ").Trim();
             string[] values = birdsStr.Split(' ');
             byte level = byte.Parse(values[0]);
 
-            var birdsQueue = new byte[values.Length - 1];
-            for (int j = 1; j < values.Length; j++)
+            ResultSystem.Instance.SetResultRequires(int.Parse(values[1]), int.Parse(values[2]), int.Parse(values[3]));
+
+            var birdsQueue = new byte[values.Length - 5];
+            for (int j = 5; j < values.Length; j++)
             {
                 if (byte.TryParse(values[j], out var number))
-                    birdsQueue[j - 1] = number;
+                    birdsQueue[j - 5] = number;
             }
 
             KeyValuePair<byte, byte[]> birdsInLevel = new KeyValuePair<byte, byte[]>(level, birdsQueue);

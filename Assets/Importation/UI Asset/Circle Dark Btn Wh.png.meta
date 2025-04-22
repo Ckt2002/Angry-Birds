@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Circle Dark Btn Wh_0: 2496494615868247361
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

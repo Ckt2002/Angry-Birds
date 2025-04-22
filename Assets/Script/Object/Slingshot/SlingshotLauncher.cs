@@ -16,7 +16,7 @@ public class SlingshotLauncher : MonoBehaviour
     {
         Vector2 direction = (readyPos - birdPos).normalized;
         float tension = Mathf.Min(Vector2.Distance(readyPos, birdPos), maxTension);
-        return direction * tension * launchForce;
+        return direction * launchForce * maxTension;
     }
 
     public Vector2 CalculateBirdPosition(Vector2 mousePos)

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Star Disable Shd_0: -5315306080759809301
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

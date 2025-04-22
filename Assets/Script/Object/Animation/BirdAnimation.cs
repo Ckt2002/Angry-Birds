@@ -6,7 +6,7 @@ public class BirdAnimation : MonoBehaviour, IBirdAnim
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
     }
 
     public void RunCollied()

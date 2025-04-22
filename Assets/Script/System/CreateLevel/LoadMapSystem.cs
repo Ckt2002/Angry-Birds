@@ -9,6 +9,8 @@ public class LoadMapSystem : MonoBehaviour
     [SerializeField] private Transform obstacleParent;
     [SerializeField] private Transform enemyParent;
 
+    private ObjectsActivation objectsInLevel;
+
     private void Awake()
     {
         if (Instance == null)
@@ -17,21 +19,27 @@ public class LoadMapSystem : MonoBehaviour
             Destroy(this);
     }
 
+    private void Start()
+    {
+        objectsInLevel = ObjectsActivation.Instance;
+    }
+
     public void Load(CreateLevelData levelData)
     {
-        foreach (var obstacle in levelData.obstacles)
+        foreach (var obstacleData in levelData.obstacles)
         {
-            var index = obstacle.obstacleType;
-            var obj = Instantiate(obstaclesObj.obstaclePrefabs[(int)index], obstacleParent);
-            obj.transform.position = obstacle.position;
-            //obj.transform.rotation = obstacle.rotation;
+            var index = obstacleData.obstacleType;
+            var obstacle = Instantiate(obstaclesObj.obstaclePrefabs[(int)index], obstacleParent);
+            obstacle.transform.position = obstacleData.position;
+            obstacle.transform.rotation = obstacleData.rotation;
         }
 
-        foreach (var enemy in levelData.enemies)
+        objectsInLevel?.InitializationEnemies(levelData.enemies.Count);
+        foreach (var enemyData in levelData.enemies)
         {
-            var index = enemy.enemyType;
-            var obj = Instantiate(enemiesObj.enemyPrefabs[(int)index], enemyParent);
-            obj.transform.position = enemy.position;
+            var index = enemyData.enemyType;
+            var enemy = Instantiate(enemiesObj.enemyPrefabs[(int)index], enemyParent);
+            enemy.transform.position = enemyData.position;
         }
     }
 }

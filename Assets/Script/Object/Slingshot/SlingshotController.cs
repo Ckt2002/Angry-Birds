@@ -11,6 +11,7 @@ public class SlingshotController : MonoBehaviour
     private BirdProviderSystem slingshotSystem;
     private Vector2 readyPos;
     private BirdController currentBird;
+    private bool isDragging = false;
 
     private void Start()
     {
@@ -18,10 +19,6 @@ public class SlingshotController : MonoBehaviour
         readyPos = readyTransform.position;
 
         ropeVisual.Initialize(readyPos);
-
-        inputHandler.OnDragAction += DragBird;
-        inputHandler.OnReleaseAction += LaunchBird;
-        launcher.SetValues(readyPos);
     }
 
     void Update()
@@ -32,13 +29,38 @@ public class SlingshotController : MonoBehaviour
             if (currentBird != null)
                 currentBird.BirdGetReadyState(readyPos);
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            var hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if (hit.collider != null)
+            {
+                isDragging = true;
+                DragBird();
+            }
+        }
+
+        if (isDragging && Input.GetMouseButtonUp(0))
+        {
+            isDragging = false;
+            LaunchBird();
+        }
+
+        if (isDragging) DragBird();
     }
 
     public BirdController GetNexBird()
     {
         if (slingshotSystem == null)
             slingshotSystem = BirdProviderSystem.Instance;
-        return slingshotSystem.GetBirdFromQueue();
+        var bird = slingshotSystem?.GetBirdFromQueue();
+        return bird;
+    }
+    public Vector2 CalculateBirdPosition(Vector2 mousePos)
+    {
+        Vector2 direction = (readyPos - mousePos).normalized;
+        float distance = Mathf.Min(Vector2.Distance(mousePos, readyPos), 2);
+        return readyPos - direction * distance;
     }
 
     private void DragBird()
@@ -47,12 +69,16 @@ public class SlingshotController : MonoBehaviour
             return;
 
         Vector2 mousePos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
-        //if (mousePos == (Vector2)currentBird.transform.position)
-        //{
         currentBird.BirdDragState();
-        currentBird.transform.position = launcher.CalculateBirdPosition(mousePos);
+        currentBird.transform.position = CalculateBirdPosition(mousePos);
         ropeVisual.UpdateRope(currentBird.transform.position);
-        //}
+    }
+
+    public Vector2 CalculateLaunchForce(Vector2 birdPos)
+    {
+        Vector2 direction = (readyPos - birdPos).normalized;
+        float tension = Mathf.Min(Vector2.Distance(readyPos, birdPos), 2);
+        return direction * 10 * tension;
     }
 
     private void LaunchBird()
@@ -60,18 +86,15 @@ public class SlingshotController : MonoBehaviour
         if (currentBird == null)
             return;
         Vector2 birdPos = currentBird.transform.position;
-        var launchForceFinal = launcher.CalculateLaunchForce(birdPos);
-        var birdComponent = currentBird.GetComponent<BirdController>();
-        birdComponent.BirdLaunchState(launchForceFinal);
+        var launchForceFinal = CalculateLaunchForce(birdPos);
+        currentBird.GetComponent<BirdController>().BirdLaunchState(launchForceFinal);
         ropeVisual.ResetRope();
-        currentBird = null;
-        //StartCoroutine(nameof(DisableCurrentBird));
+        StartCoroutine(GetNextBird());
     }
 
-    private IEnumerator DisableCurrentBird()
+    private IEnumerator GetNextBird()
     {
-        yield return new WaitForSeconds(2f);
-        if (currentBird != null)
-            currentBird = null;
+        yield return new WaitForSeconds(3f);
+        currentBird = null;
     }
 }

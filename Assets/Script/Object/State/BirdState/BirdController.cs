@@ -52,7 +52,10 @@ public abstract class BirdController : MonoBehaviour
     public void BirdLaunchState(Vector2 launchForce)
     {
         if (!launched)
-            stateMachine.ChangeState(new BirdLaunchState(rb2D, launchForce, anim, () => launched = true));
+        {
+            stateMachine.ChangeState(new BirdLaunchState(rb2D, launchForce, anim));
+            launched = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -65,7 +68,6 @@ public abstract class BirdController : MonoBehaviour
     {
         name = gameObject.name.Replace("(Clone)", "");
         rb2D.bodyType = RigidbodyType2D.Kinematic;
-        rb2D.simulated = false;
         skillActive = false;
         launched = false;
         transform.localRotation = Quaternion.Euler(Vector3.zero);

@@ -27,7 +27,6 @@ public class LoadBirdSystem : MonoBehaviour
             levelsInfor = new Dictionary<byte, byte[]>();
             await CsvLevelSystem.LoadDataLevelFromCSV(SetLevelDictionary);
 
-            //TODO: this code here is just for text, press level button UI will run this
             SetCurrentLevel((byte)level);
         }
         catch (Exception e)
@@ -47,14 +46,14 @@ public class LoadBirdSystem : MonoBehaviour
             levelsInfor.Add(levelInfor.Key, levelInfor.Value);
     }
 
-    private void LoadLevel()
-    {
-        getBirdSystem?.LoadBirdsInLevel(levelsInfor[currentLevel]);
-    }
-
     public void SetCurrentLevel(byte currentLevel)
     {
         this.currentLevel = currentLevel;
         LoadLevel();
+    }
+
+    private void LoadLevel()
+    {
+        getBirdSystem?.LoadBirdsInLevel(levelsInfor[currentLevel]);
     }
 }

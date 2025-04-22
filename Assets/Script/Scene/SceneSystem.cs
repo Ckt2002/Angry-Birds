@@ -13,8 +13,6 @@ public class SceneSystem : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
     }
 
     #region Load scene

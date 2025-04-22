@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rectangle White Bgr Shd_0: 4968396500001652439
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

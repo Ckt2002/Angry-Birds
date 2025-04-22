@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Select Level Btn_0: -2780307062357384644
+      Select Level Btn_1: 5513777999547844227
+      Select Level Btn_2: 8085492731048407131
+      Select Level Btn_3: -8752776693666793585
+      Select Level Btn_4: -4079497230405806627
+      Select Level Btn_5: 6719482467167245655
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

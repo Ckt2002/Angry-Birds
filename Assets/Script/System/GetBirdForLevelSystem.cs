@@ -5,9 +5,16 @@ namespace Script.System
 {
     public class GetBirdForLevelSystem : MonoBehaviour
     {
-        private Vector2 birdSpawnPos;
         [SerializeField] private BirdPoolingSystem birdPoolingSystem;
-        [SerializeField] private BirdProviderSystem slingshotSystem;
+        [SerializeField] private BirdProviderSystem birdProviderSystem;
+
+        private Vector2 birdSpawnPos;
+        private ObjectsActivation objectsSpawned;
+
+        private void Start()
+        {
+            objectsSpawned = ObjectsActivation.Instance;
+        }
 
         public void LoadBirdsInLevel(byte[] birdTypes)
         {
@@ -17,19 +24,26 @@ namespace Script.System
             birdSpawnPos = BirdSpawnPos.Instance.gameObject.transform.position;
 
             int posCount = 0;
+            if (objectsSpawned == null)
+                objectsSpawned = ObjectsActivation.Instance;
+
+            objectsSpawned?.InitializationBirds(birdTypes.Length);
+            birdProviderSystem.InitializationBirdQueue();
             foreach (var birdType in birdTypes)
             {
                 EBirdType type = (EBirdType)birdType;
 
-                //TODO: Change the spawn pos here
+                //todo: Update the spawn pos here
                 var bird = birdPoolingSystem.GetBirdPool(type);
                 bird.gameObject.SetActive(true);
                 var offSet = posCount * 2 + 2;
                 var pos = new Vector2(birdSpawnPos.x - offSet, birdSpawnPos.y);
                 bird.gameObject.transform.position = pos;
-                slingshotSystem.AddBirdToQueue(bird);
                 posCount++;
+
+                birdProviderSystem.AddBirdToQueue(bird);
             }
+            birdProviderSystem.ResetIndex();
         }
     }
 }

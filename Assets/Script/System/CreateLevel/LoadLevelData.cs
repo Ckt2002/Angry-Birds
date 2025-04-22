@@ -21,7 +21,6 @@ public class LoadLevelData : MonoBehaviour
         try
         {
             var textAsset = levelFiles[level - 1];
-            Debug.Log(textAsset);
             string levelJson = textAsset.text;
             var data = await Task.Run(() => JsonUtility.FromJson<CreateLevelData>(levelJson));
             LoadMapSystem.Instance.Load(data);

@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BirdMoveInLineState : IBirdState
@@ -20,7 +19,9 @@ public class BirdMoveInLineState : IBirdState
     public void ExecuteEveryFrame()
     {
         if (bird != null && Vector2.Distance(bird.transform.position, newPos) > 0.1f)
+        {
             bird.transform.position = Vector2.Lerp(bird.transform.position, newPos, Time.deltaTime * 2f);
+        }
     }
 
     public void ExecuteOnce()

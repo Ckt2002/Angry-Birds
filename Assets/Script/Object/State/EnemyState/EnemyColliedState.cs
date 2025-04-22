@@ -5,15 +5,23 @@ public class EnemyColliedState : IEnemyState
 {
     private EnemyController enemyController;
     private ParticlePoolingSystem particlePoolingSystem;
+    private ObjectsActivation objectsActivation;
 
     public EnemyColliedState(EnemyController enemyController)
     {
         this.enemyController = enemyController;
         particlePoolingSystem = ParticlePoolingSystem.Instance;
+        objectsActivation = ObjectsActivation.Instance;
     }
 
     public void Enter()
     {
+        if (particlePoolingSystem == null)
+            particlePoolingSystem = ParticlePoolingSystem.Instance;
+
+        if (objectsActivation == null)
+            objectsActivation = ObjectsActivation.Instance;
+
         enemyController.StartCoroutine(DieStatus());
     }
 
@@ -21,9 +29,9 @@ public class EnemyColliedState : IEnemyState
     {
         var go = enemyController.gameObject;
         var particle = particlePoolingSystem?.GetParticle(EnemyNames.Pig);
-        if (particle != null)
-            particle.RunParticle(enemyController.transform.position);
-        yield return new WaitForSeconds(0.1f);
+        particle.RunParticle(enemyController.transform.position);
+        yield return new WaitForSeconds(0.2f);
+        objectsActivation?.EnemiesNumReduce();
         Exit();
         go.SetActive(false);
     }
@@ -32,5 +40,6 @@ public class EnemyColliedState : IEnemyState
     {
         enemyController = null;
         particlePoolingSystem = null;
+        objectsActivation = null;
     }
 }

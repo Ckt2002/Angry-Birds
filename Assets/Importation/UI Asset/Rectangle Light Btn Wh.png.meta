@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rectangle Light Btn Wh_0: 123284382755499251
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

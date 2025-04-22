@@ -4,7 +4,7 @@ public class GameStat : MonoBehaviour
 {
     public static GameStat Instance;
 
-    [SerializeField] public float velocityThreshold = 1.9f;
+    public float velocityThreshold = 1.9f;
 
     private void Awake()
     {

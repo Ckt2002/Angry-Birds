@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      In Game menu Btn Shd_0: -746379628256017776
+      In Game menu Btn Shd_1: -7119169070362308547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -4,7 +4,7 @@ public class LevelSystem : MonoBehaviour
 {
     public static LevelSystem Instance;
 
-    [Min(1), SerializeField] private int level;
+    [Min(1), SerializeField] private int level = 1;
 
     private void Awake()
     {
@@ -29,5 +29,17 @@ public class LevelSystem : MonoBehaviour
     {
         LoadBirdSystem.Instance.Load(level);
         _ = LoadLevelData.Instance.LoadAsync(level);
+    }
+
+    public void NextLevel()
+    {
+        level++;
+        LoadLevel();
+    }
+
+    public void SetLevel(int level)
+    {
+        this.level = level;
+        LoadLevel();
     }
 }

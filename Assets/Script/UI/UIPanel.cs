@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class UIPanel : MonoBehaviour
 {
-    [SerializeField] private EUIType UIType;
-    [SerializeField] private RectTransform rectTransform;
-    [SerializeField] private float duration = 3f;
-    [SerializeField] private Vector2 hidePos;
+    [SerializeField] protected EUIType UIType;
+    [SerializeField] protected RectTransform rectTransform;
+    [SerializeField] protected float duration = 3f;
+    [SerializeField] protected Vector2 hidePos;
 
     public void HandleUITypeChanged(EUIType newType, Action closeGeneralPanelAct, Action<UIPanel> updateStackAct)
     {
@@ -29,7 +29,7 @@ public class UIPanel : MonoBehaviour
             });
     }
 
-    public void ShowUI(Action<UIPanel> updateStackAct)
+    public virtual void ShowUI(Action<UIPanel> updateStackAct)
     {
         gameObject.SetActive(true);
         rectTransform.localPosition = hidePos;
