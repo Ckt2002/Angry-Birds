@@ -22,6 +22,7 @@ public class EnemyColliedState : IEnemyState
         if (objectsActivation == null)
             objectsActivation = ObjectsActivation.Instance;
 
+        objectsActivation?.EnemiesNumReduce();
         enemyController.StartCoroutine(DieStatus());
     }
 
@@ -30,8 +31,7 @@ public class EnemyColliedState : IEnemyState
         var go = enemyController.gameObject;
         var particle = particlePoolingSystem?.GetParticle(EnemyNames.Pig);
         particle.RunParticle(enemyController.transform.position);
-        yield return new WaitForSeconds(0.2f);
-        objectsActivation?.EnemiesNumReduce();
+        yield return new WaitForSeconds(0.1f);
         Exit();
         go.SetActive(false);
     }

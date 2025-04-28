@@ -6,7 +6,6 @@ public class UIPanel : MonoBehaviour
 {
     [SerializeField] protected EUIType UIType;
     [SerializeField] protected RectTransform rectTransform;
-    [SerializeField] protected float duration = 3f;
     [SerializeField] protected Vector2 hidePos;
 
     public void HandleUITypeChanged(EUIType newType, Action closeGeneralPanelAct, Action<UIPanel> updateStackAct)
@@ -33,7 +32,7 @@ public class UIPanel : MonoBehaviour
     {
         gameObject.SetActive(true);
         rectTransform.localPosition = hidePos;
-        rectTransform.DOLocalMove(Vector2.zero, duration)
+        rectTransform.DOLocalMove(Vector2.zero, 1.5f)
             .SetLink(gameObject)
             .OnComplete(
             () =>

@@ -24,21 +24,20 @@ public class BirdColliedState : IBirdState
 
         anim?.RunCollied();
 
-        coroutine = bird.StartCoroutine(WaitAndDisable(5f));
+        coroutine = bird.StartCoroutine(WaitAndDisable());
     }
 
     public void ExecuteOnce()
     {
     }
 
-    private IEnumerator WaitAndDisable(float delay)
+    private IEnumerator WaitAndDisable()
     {
         var go = bird.gameObject;
         var particle = particlePoolingSystem?.GetParticle(name);
         particle?.RunParticle(go.transform.position);
-
-        yield return new WaitForSeconds(delay);
-        ObjectsActivation.Instance.BirdsNumReduce();
+        yield return new WaitForSeconds(3f);
+        ResultSystem.Instance.CheckResult();
         particle?.RunParticle(go.transform.position);
         go.SetActive(false);
         Exit();

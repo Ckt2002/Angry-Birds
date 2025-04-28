@@ -29,6 +29,8 @@ namespace Script.System
 
             objectsSpawned?.InitializationBirds(birdTypes.Length);
             birdProviderSystem.InitializationBirdQueue();
+            birdProviderSystem.InitializationBirdList(birdTypes.Length);
+
             foreach (var birdType in birdTypes)
             {
                 EBirdType type = (EBirdType)birdType;
@@ -42,6 +44,7 @@ namespace Script.System
                 posCount++;
 
                 birdProviderSystem.AddBirdToQueue(bird);
+                birdProviderSystem.AddBirdToList(bird);
             }
             birdProviderSystem.ResetIndex();
         }

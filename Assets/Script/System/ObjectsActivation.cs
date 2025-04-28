@@ -21,6 +21,12 @@ public class ObjectsActivation : MonoBehaviour
         birdsRemain = spawnedNumber;
     }
 
-    public void EnemiesNumReduce() { enemiesRemain--; }
-    public void BirdsNumReduce() { birdsRemain--; }
+    public void EnemiesNumReduce()
+    {
+        enemiesRemain--;
+    }
+    public void BirdsNumReduce()
+    {
+        birdsRemain--;
+    }
 }

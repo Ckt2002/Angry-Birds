@@ -41,6 +41,7 @@ public class SceneSystem : MonoBehaviour
         transitionAnimator.SetTrigger("End");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        BirdProviderSystem.Instance.ResetBirdQueue();
         transitionAnimator.SetTrigger("Start");
     }
     #endregion

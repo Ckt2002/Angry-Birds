@@ -17,6 +17,7 @@ public class BirdLaunchState : IBirdState
     {
         birdRb.bodyType = RigidbodyType2D.Dynamic;
         birdRb.AddForce(launchForce, ForceMode2D.Impulse);
+        ObjectsActivation.Instance.BirdsNumReduce();
     }
 
     public void ExecuteOnce()

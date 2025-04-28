@@ -6,7 +6,8 @@ public class BirdProviderSystem : MonoBehaviour
     public static BirdProviderSystem Instance { get; private set; }
 
     private Queue<BirdController> birdsInQueue;
-    private int currentIndex = 0;
+    private BirdController[] birds;
+    private int index = 0;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class BirdProviderSystem : MonoBehaviour
             Destroy(this);
     }
 
+    #region BirdQueue
     public void InitializationBirdQueue()
     {
         birdsInQueue = new();
@@ -24,14 +26,7 @@ public class BirdProviderSystem : MonoBehaviour
     public void AddBirdToQueue(BirdController bird)
     {
         if (bird != null && birdsInQueue != null)
-        {
             birdsInQueue.Enqueue(bird);
-        }
-    }
-
-    public void ResetIndex()
-    {
-        currentIndex = 0;
     }
 
     public BirdController GetBirdFromQueue()
@@ -44,4 +39,58 @@ public class BirdProviderSystem : MonoBehaviour
 
         return birdsInQueue.Dequeue();
     }
+
+    public void ResetBirdQueue()
+    {
+        while (birdsInQueue.Count > 0)
+        {
+            var bird = birdsInQueue.Dequeue();
+            bird.gameObject.SetActive(false);
+        }
+    }
+    #endregion
+
+    #region BirdList
+
+    public void InitializationBirdList(int size)
+    {
+        birds = new BirdController[size];
+        ResetIndex();
+    }
+
+    public void ResetIndex()
+    {
+        index = 0;
+    }
+
+    public void AddBirdToList(BirdController bird)
+    {
+        if (index < birds.Length)
+        {
+            birds[index] = bird;
+            index++;
+        }
+    }
+
+    public BirdController GetBirdFromList()
+    {
+        if (index < birds.Length && birds.Length > 0)
+        {
+            index++;
+            return birds[index];
+        }
+
+        return null;
+    }
+
+    public void ResetBirdInList()
+    {
+        foreach (var bird in birds)
+        {
+            if (bird.gameObject.activeInHierarchy)
+                bird.gameObject.SetActive(false);
+        }
+        birds = null;
+    }
+    #endregion
 }
