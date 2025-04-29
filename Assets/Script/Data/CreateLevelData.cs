@@ -4,6 +4,9 @@ using System.Collections.Generic;
 [Serializable]
 public class CreateLevelData
 {
-    public List<EnemyData> enemies;
-    public List<ObstacleData> obstacles;
+    public int Level = 1;
+    public int StarNumber = 0;
+    public bool IsLocked = true;
+    public List<EnemyData> Enemies;
+    public List<ObstacleData> Obstacles;
 }

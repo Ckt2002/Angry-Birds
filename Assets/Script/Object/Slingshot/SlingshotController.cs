@@ -8,14 +8,14 @@ public class SlingshotController : MonoBehaviour
     [SerializeField] private SlingshotInputHandler inputHandler;
     [SerializeField] private SlingshotLauncher launcher;
 
-    private BirdProviderSystem slingshotSystem;
+    private BirdProviderSystem birdProviderSystem;
     private Vector2 readyPos;
     private BirdController currentBird;
     private bool isDragging = false;
 
     private void Start()
     {
-        slingshotSystem = BirdProviderSystem.Instance;
+        birdProviderSystem = BirdProviderSystem.Instance;
         readyPos = readyTransform.position;
 
         ropeVisual.Initialize(readyPos);
@@ -46,14 +46,16 @@ public class SlingshotController : MonoBehaviour
             LaunchBird();
         }
 
-        if (isDragging) DragBird();
+        if (isDragging)
+            DragBird();
     }
 
     public BirdController GetNexBird()
     {
-        if (slingshotSystem == null)
-            slingshotSystem = BirdProviderSystem.Instance;
-        var bird = slingshotSystem?.GetBirdFromQueue();
+        if (birdProviderSystem == null)
+            birdProviderSystem = BirdProviderSystem.Instance;
+
+        var bird = birdProviderSystem?.GetBirdFromList();
         return bird;
     }
     public Vector2 CalculateBirdPosition(Vector2 mousePos)

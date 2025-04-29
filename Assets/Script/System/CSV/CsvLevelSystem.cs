@@ -7,6 +7,8 @@ public class CsvLevelSystem : MonoBehaviour
 {
     public static Task LoadDataLevelFromCSV(Action<KeyValuePair<byte, byte[]>> action = null)
     {
+
+        Debug.Log("Loading level file");
         string fileName = "Level CSV";
         TextAsset csvData = Resources.Load<TextAsset>(fileName);
 
@@ -20,7 +22,8 @@ public class CsvLevelSystem : MonoBehaviour
 
         for (int i = 2; i < 7; i++)
         {
-            if (string.IsNullOrEmpty(lines[i])) continue;
+            if (string.IsNullOrEmpty(lines[i]))
+                continue;
 
             string birdsStr = lines[i].Replace('"', ' ').Replace(", ", " ").Replace(",", " ").Trim();
             string[] values = birdsStr.Split(' ');

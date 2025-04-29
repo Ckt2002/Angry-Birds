@@ -9,6 +9,9 @@ public class BirdStateMachine : MonoBehaviour
     {
         currentState?.Exit();
         currentState = newState;
+        if (currentState == null)
+            return;
+
         currentState.Enter();
     }
 

@@ -1,12 +1,12 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BirdProviderSystem : MonoBehaviour
 {
     public static BirdProviderSystem Instance { get; private set; }
 
-    private Queue<BirdController> birdsInQueue;
-    private BirdController[] birds;
+    //private Queue<BirdController> birdsInQueue;
+    public BirdController[] birds { get; private set; }
+
     private int index = 0;
 
     private void Awake()
@@ -18,36 +18,36 @@ public class BirdProviderSystem : MonoBehaviour
     }
 
     #region BirdQueue
-    public void InitializationBirdQueue()
-    {
-        birdsInQueue = new();
-    }
+    //public void InitializationBirdQueue()
+    //{
+    //    birdsInQueue = new();
+    //}
 
-    public void AddBirdToQueue(BirdController bird)
-    {
-        if (bird != null && birdsInQueue != null)
-            birdsInQueue.Enqueue(bird);
-    }
+    //public void AddBirdToQueue(BirdController bird)
+    //{
+    //    if (bird != null && birdsInQueue != null)
+    //        birdsInQueue.Enqueue(bird);
+    //}
 
-    public BirdController GetBirdFromQueue()
-    {
-        if (birdsInQueue.Count == 0)
-            return null;
+    //public BirdController GetBirdFromQueue()
+    //{
+    //    if (birdsInQueue.Count == 0)
+    //        return null;
 
-        foreach (var bird in birdsInQueue)
-            bird.MoveInLineState();
+    //    foreach (var bird in birdsInQueue)
+    //        bird.MoveInLineState();
 
-        return birdsInQueue.Dequeue();
-    }
+    //    return birdsInQueue.Dequeue();
+    //}
 
-    public void ResetBirdQueue()
-    {
-        while (birdsInQueue.Count > 0)
-        {
-            var bird = birdsInQueue.Dequeue();
-            bird.gameObject.SetActive(false);
-        }
-    }
+    //public void ResetBirdQueue()
+    //{
+    //    while (birdsInQueue.Count > 0)
+    //    {
+    //        var bird = birdsInQueue.Dequeue();
+    //        bird.gameObject.SetActive(false);
+    //    }
+    //}
     #endregion
 
     #region BirdList
@@ -74,10 +74,17 @@ public class BirdProviderSystem : MonoBehaviour
 
     public BirdController GetBirdFromList()
     {
+        if (birds == null)
+        {
+            Debug.Log("list is null");
+            return null;
+        }
+
         if (index < birds.Length && birds.Length > 0)
         {
+            var bird = birds[index];
             index++;
-            return birds[index];
+            return bird;
         }
 
         return null;
@@ -91,6 +98,7 @@ public class BirdProviderSystem : MonoBehaviour
                 bird.gameObject.SetActive(false);
         }
         birds = null;
+        index = 0;
     }
     #endregion
 }

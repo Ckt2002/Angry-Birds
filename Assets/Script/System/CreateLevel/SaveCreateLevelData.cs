@@ -7,6 +7,7 @@ public class SaveCreateLevelData : MonoBehaviour
 {
     [Min(1)]
     [SerializeField] private int level;
+    [SerializeField] private bool isLocked = true;
     [SerializeField] private Transform obstacleParent;
     [SerializeField] private Transform enemyParent;
 
@@ -31,13 +32,16 @@ public class SaveCreateLevelData : MonoBehaviour
 
         var levelData = new CreateLevelData
         {
-            obstacles = new List<ObstacleData>(),
-            enemies = new List<EnemyData>()
+            Level = level,
+            IsLocked = isLocked,
+            StarNumber = 0,
+            Obstacles = new List<ObstacleData>(),
+            Enemies = new List<EnemyData>()
         };
 
         foreach (var obstacle in obstacles)
         {
-            levelData.obstacles.Add(
+            levelData.Obstacles.Add(
                 new ObstacleData
                 {
                     obstacleType = obstacle.obstacleType,
@@ -49,7 +53,7 @@ public class SaveCreateLevelData : MonoBehaviour
 
         foreach (var enemy in enemies)
         {
-            levelData.enemies.Add(
+            levelData.Enemies.Add(
                 new EnemyData
                 {
                     enemyType = enemy.enemyType,

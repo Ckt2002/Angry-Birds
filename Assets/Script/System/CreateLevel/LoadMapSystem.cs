@@ -26,16 +26,29 @@ public class LoadMapSystem : MonoBehaviour
 
     public void Load(CreateLevelData levelData)
     {
-        foreach (var obstacleData in levelData.obstacles)
+        if (obstacleParent == null)
+        {
+            GameObject parentObj = GameObject.Find("Obstacles");
+            obstacleParent = parentObj.transform;
+        }
+
+        if (enemyParent == null)
+        {
+            GameObject parentObj = GameObject.Find("Enemies");
+            enemyParent = parentObj.transform;
+        }
+
+        foreach (var obstacleData in levelData.Obstacles)
         {
             var index = obstacleData.obstacleType;
             var obstacle = Instantiate(obstaclesObj.obstaclePrefabs[(int)index], obstacleParent);
+            Debug.Log(obstacle);
             obstacle.transform.position = obstacleData.position;
             obstacle.transform.rotation = obstacleData.rotation;
         }
 
-        objectsInLevel?.InitializationEnemies(levelData.enemies.Count);
-        foreach (var enemyData in levelData.enemies)
+        objectsInLevel?.InitializationEnemies(levelData.Enemies.Count);
+        foreach (var enemyData in levelData.Enemies)
         {
             var index = enemyData.enemyType;
             var enemy = Instantiate(enemiesObj.enemyPrefabs[(int)index], enemyParent);

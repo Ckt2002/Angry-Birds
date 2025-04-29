@@ -19,12 +19,6 @@ public class LevelSystem : MonoBehaviour
         LoadLevel();
     }
 
-    [ContextMenu("LoadLevel")]
-    public void Load()
-    {
-        LoadLevel();
-    }
-
     public void LoadLevel()
     {
         LoadBirdSystem.Instance.Load(level);

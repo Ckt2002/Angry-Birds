@@ -71,6 +71,7 @@ public abstract class BirdController : MonoBehaviour
         skillActive = false;
         launched = false;
         transform.localRotation = Quaternion.Euler(Vector3.zero);
+        stateMachine.ChangeState(null);
     }
 
     protected virtual void SpecialSkill()

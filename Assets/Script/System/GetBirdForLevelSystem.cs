@@ -28,7 +28,6 @@ namespace Script.System
                 objectsSpawned = ObjectsActivation.Instance;
 
             objectsSpawned?.InitializationBirds(birdTypes.Length);
-            birdProviderSystem.InitializationBirdQueue();
             birdProviderSystem.InitializationBirdList(birdTypes.Length);
 
             foreach (var birdType in birdTypes)
@@ -43,7 +42,6 @@ namespace Script.System
                 bird.gameObject.transform.position = pos;
                 posCount++;
 
-                birdProviderSystem.AddBirdToQueue(bird);
                 birdProviderSystem.AddBirdToList(bird);
             }
             birdProviderSystem.ResetIndex();

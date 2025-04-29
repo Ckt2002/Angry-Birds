@@ -1,5 +1,8 @@
 {
-    "enemies": [
+    "Level": 1,
+    "StarNumber": 0,
+    "IsLocked": false,
+    "Enemies": [
         {
             "enemyType": 0,
             "position": {
@@ -15,7 +18,7 @@
             }
         }
     ],
-    "obstacles": [
+    "Obstacles": [
         {
             "obstacleType": 1,
             "position": {

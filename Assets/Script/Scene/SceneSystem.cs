@@ -31,17 +31,55 @@ public class SceneSystem : MonoBehaviour
     #endregion
 
     #region Load level
-    public void LoadLevel()
+    public void NextLevel()
     {
-        StartCoroutine(Level());
+        StartCoroutine(Next());
     }
 
-    IEnumerator Level()
+    IEnumerator Next()
     {
         transitionAnimator.SetTrigger("End");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        BirdProviderSystem.Instance.ResetBirdQueue();
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        yield return asyncLoad;
+        BirdProviderSystem.Instance.ResetBirdInList();
+        LevelSystem.Instance.NextLevel();
+        transitionAnimator.SetTrigger("Start");
+    }
+    #endregion
+
+    #region Restart level
+    public void RestartLevel()
+    {
+        StartCoroutine(Restart());
+    }
+
+    IEnumerator Restart()
+    {
+        transitionAnimator.SetTrigger("End");
+        yield return new WaitForSeconds(1f);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        yield return asyncLoad;
+        BirdProviderSystem.Instance.ResetBirdInList();
+        LevelSystem.Instance.LoadLevel();
+        transitionAnimator.SetTrigger("Start");
+    }
+    #endregion
+
+    #region Load level
+    public void LoadLevel(int level)
+    {
+        StartCoroutine(Load(level));
+    }
+
+    IEnumerator Load(int level)
+    {
+        transitionAnimator.SetTrigger("End");
+        yield return new WaitForSeconds(1f);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        yield return asyncLoad;
+        BirdProviderSystem.Instance.ResetBirdInList();
+        LevelSystem.Instance.SetLevel(level);
         transitionAnimator.SetTrigger("Start");
     }
     #endregion
