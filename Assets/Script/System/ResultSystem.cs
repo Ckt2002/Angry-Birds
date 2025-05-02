@@ -51,6 +51,7 @@ public class ResultSystem : MonoBehaviour
             else
                 resultStar = 0;
 
+            UpdateLevelManager();
             ShowResult();
         }
     }
@@ -59,5 +60,15 @@ public class ResultSystem : MonoBehaviour
     {
         UIManager.Instance.ShowInGameMenuPanel();
         UIManager.Instance.ChangeUIType(EUIType.Result);
+    }
+
+    private void UpdateLevelManager()
+    {
+        var currentLevel = LevelSystem.Instance.GetLevel;
+        var lst = LoadLevelManager.Instance.levelManagerData.levelDataArr;
+
+        lst[currentLevel - 1].StarNumber = resultStar;
+        // Unlock next level
+        lst[currentLevel].IsLocked = false;
     }
 }

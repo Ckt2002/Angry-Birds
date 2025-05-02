@@ -2,6 +2,6 @@
 {
     public override void Action()
     {
-        SceneSystem.Instance.RestartLevel();
+        SceneSystem.Instance.NextLevel();
     }
 }

@@ -7,6 +7,7 @@ public class LoadLevelData : MonoBehaviour
     public static LoadLevelData Instance;
 
     [SerializeField] private TextAsset[] levelFiles;
+    [SerializeField] private TextAsset levelManagerFile;
 
     private void Awake()
     {
@@ -16,7 +17,26 @@ public class LoadLevelData : MonoBehaviour
             Destroy(this);
     }
 
-    public async Task LoadAsync(int level)
+    private async void Start()
+    {
+        await LoadLevelManagerAsync();
+    }
+
+    private async Task LoadLevelManagerAsync()
+    {
+        try
+        {
+            var levelManagerJson = levelManagerFile?.text;
+            var data = await Task.Run(() => JsonUtility.FromJson<LevelManager>(levelManagerJson));
+            LoadLevelManager.Instance.Load(data);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e);
+        }
+    }
+
+    public async Task LoadLevelDataAsync(int level)
     {
         try
         {

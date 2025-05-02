@@ -42,7 +42,6 @@ public class LoadMapSystem : MonoBehaviour
         {
             var index = obstacleData.obstacleType;
             var obstacle = Instantiate(obstaclesObj.obstaclePrefabs[(int)index], obstacleParent);
-            Debug.Log(obstacle);
             obstacle.transform.position = obstacleData.position;
             obstacle.transform.rotation = obstacleData.rotation;
         }

@@ -1,0 +1,54 @@
+{
+    "levelDataArr": [
+        {
+            "Level": 1,
+            "StarNumber": 0,
+            "IsLocked": false
+        },
+        {
+            "Level": 2,
+            "StarNumber": 0,
+            "IsLocked": true
+        },
+        {
+            "Level": 3,
+            "StarNumber": 0,
+            "IsLocked": true
+        },
+        {
+            "Level": 4,
+            "StarNumber": 0,
+            "IsLocked": true
+        },
+        {
+            "Level": 5,
+            "StarNumber": 0,
+            "IsLocked": true
+        },
+        {
+            "Level": 6,
+            "StarNumber": 0,
+            "IsLocked": true
+        },
+        {
+            "Level": 7,
+            "StarNumber": 0,
+            "IsLocked": true
+        },
+        {
+            "Level": 8,
+            "StarNumber": 0,
+            "IsLocked": true
+        },
+        {
+            "Level": 9,
+            "StarNumber": 0,
+            "IsLocked": true
+        },
+        {
+            "Level": 10,
+            "StarNumber": 0,
+            "IsLocked": true
+        }
+    ]
+}

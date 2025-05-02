@@ -7,8 +7,6 @@ public class CsvLevelSystem : MonoBehaviour
 {
     public static Task LoadDataLevelFromCSV(Action<KeyValuePair<byte, byte[]>> action = null)
     {
-
-        Debug.Log("Loading level file");
         string fileName = "Level CSV";
         TextAsset csvData = Resources.Load<TextAsset>(fileName);
 

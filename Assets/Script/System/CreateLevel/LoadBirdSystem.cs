@@ -24,7 +24,6 @@ public class LoadBirdSystem : MonoBehaviour
     {
         try
         {
-            Debug.Log($"Loading level {level}");
             levelsInfor = new Dictionary<byte, byte[]>();
             await CsvLevelSystem.LoadDataLevelFromCSV(SetLevelDictionary);
 

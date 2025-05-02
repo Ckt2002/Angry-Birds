@@ -23,9 +23,14 @@ public class UIPanel : MonoBehaviour
             .SetLink(gameObject)
             .OnComplete(() =>
             {
-                gameObject.SetActive(false);
+                HideUIComplete();
                 closeGeneralPanelAct?.Invoke();
             });
+    }
+
+    protected virtual void HideUIComplete()
+    {
+        gameObject.SetActive(false);
     }
 
     public virtual void ShowUI(Action<UIPanel> updateStackAct)
@@ -37,7 +42,11 @@ public class UIPanel : MonoBehaviour
             .OnComplete(
             () =>
             {
+                ShowUIComplete();
                 updateStackAct?.Invoke(this);
             });
+    }
+    protected virtual void ShowUIComplete()
+    {
     }
 }

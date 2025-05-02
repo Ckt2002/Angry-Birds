@@ -83,7 +83,7 @@ public class SaveCreateLevelData : MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.LogError($"Failed to save level data: {e.Message}");
+            Debug.LogError($"Failed to save level data: {e}");
         }
     }
 }
