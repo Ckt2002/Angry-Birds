@@ -51,7 +51,6 @@ public class BirdProviderSystem : MonoBehaviour
     #endregion
 
     #region BirdList
-
     public void InitializationBirdList(int size)
     {
         birds = new BirdController[size];
@@ -92,12 +91,14 @@ public class BirdProviderSystem : MonoBehaviour
 
     public void ResetBirdInList()
     {
-        foreach (var bird in birds)
+        if (birds != null)
         {
-            if (bird.gameObject.activeInHierarchy)
-                bird.gameObject.SetActive(false);
+            foreach (var bird in birds)
+                if (bird.gameObject.activeInHierarchy)
+                    bird.gameObject.SetActive(false);
+
+            birds = null;
         }
-        birds = null;
         index = 0;
     }
     #endregion

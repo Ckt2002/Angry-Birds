@@ -1,5 +1,5 @@
 ﻿public enum EScene
 {
-    //Menu,
-    Game,
+    MenuScene,
+    GameScene,
 }

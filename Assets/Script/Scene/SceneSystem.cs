@@ -76,7 +76,7 @@ public class SceneSystem : MonoBehaviour
     {
         transitionAnimator.SetTrigger("End");
         yield return new WaitForSeconds(1f);
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync((int)EScene.GameScene);
         yield return asyncLoad;
         BirdProviderSystem.Instance.ResetBirdInList();
         LevelSystem.Instance.SetLevel(level);

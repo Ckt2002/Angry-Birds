@@ -3,12 +3,13 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
-public class UIResultPanel : UIPanel
+public class UIResultPanel : InGameUIPanel
 {
+    [SerializeField] private GameObject starsParent;
+
     private int resultStar;
     private IUIStar[] stars;
     private ResultSystem resultSystem;
-    [SerializeField] private GameObject starsParent;
 
     public override void ShowUI(Action<UIPanel> updateStackAct)
     {

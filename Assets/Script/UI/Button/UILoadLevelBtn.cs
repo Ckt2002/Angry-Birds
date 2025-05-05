@@ -11,7 +11,7 @@ public class UILoadLevelBtn : UIButton
     [SerializeField] private Sprite[] starSprites;
 
     private int level = 1;
-    private int starNumber = 0;
+    //private int starNumber = 0;
     private bool levelLocked = true;
 
     protected override void Start()

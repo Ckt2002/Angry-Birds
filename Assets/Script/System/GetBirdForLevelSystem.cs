@@ -27,7 +27,7 @@ namespace Script.System
             if (objectsSpawned == null)
                 objectsSpawned = ObjectsActivation.Instance;
 
-            objectsSpawned?.InitializationBirds(birdTypes.Length);
+            objectsSpawned.InitializationBirds(birdTypes.Length);
             birdProviderSystem.InitializationBirdList(birdTypes.Length);
 
             foreach (var birdType in birdTypes)

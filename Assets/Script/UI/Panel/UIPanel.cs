@@ -1,12 +1,9 @@
 using System;
-using DG.Tweening;
 using UnityEngine;
 
 public class UIPanel : MonoBehaviour
 {
     [SerializeField] protected EUIType UIType;
-    [SerializeField] protected RectTransform rectTransform;
-    [SerializeField] protected Vector2 hidePos;
 
     public void HandleUITypeChanged(EUIType newType, Action closeGeneralPanelAct, Action<UIPanel> updateStackAct)
     {
@@ -16,37 +13,20 @@ public class UIPanel : MonoBehaviour
             HideUI(closeGeneralPanelAct);
     }
 
-    public void HideUI(Action closeGeneralPanelAct)
+    public virtual void HideUI(Action closeGeneralPanelAct)
     {
-        rectTransform.DOLocalMove(hidePos, 0.5f)
-            .SetEase(Ease.InSine)
-            .SetLink(gameObject)
-            .OnComplete(() =>
-            {
-                HideUIComplete();
-                closeGeneralPanelAct?.Invoke();
-            });
     }
 
-    protected virtual void HideUIComplete()
+    protected virtual void HideUIOnComplete()
     {
         gameObject.SetActive(false);
     }
 
     public virtual void ShowUI(Action<UIPanel> updateStackAct)
     {
-        gameObject.SetActive(true);
-        rectTransform.localPosition = hidePos;
-        rectTransform.DOLocalMove(Vector2.zero, 1.5f)
-            .SetLink(gameObject)
-            .OnComplete(
-            () =>
-            {
-                ShowUIComplete();
-                updateStackAct?.Invoke(this);
-            });
     }
-    protected virtual void ShowUIComplete()
+
+    protected virtual void ShowUIOnComplete()
     {
     }
 }

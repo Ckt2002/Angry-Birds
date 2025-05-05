@@ -2,15 +2,15 @@ using DG.Tweening;
 using System.Collections;
 using UnityEngine;
 
-public class UILevelsPanel : UIPanel
+public class UILevelsPanel : InGameUIPanel
 {
     private LoadLevelManager loadLevelManager;
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private Transform slotsParent;
 
-    protected override void ShowUIComplete()
+    protected override void ShowUIOnComplete()
     {
-        base.ShowUIComplete();
+        base.ShowUIOnComplete();
         if (loadLevelManager == null)
             loadLevelManager = LoadLevelManager.Instance;
 

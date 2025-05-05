@@ -17,7 +17,7 @@ public class LevelSystem : MonoBehaviour
 
     private void Start()
     {
-        LoadLevel();
+        //LoadLevel();
     }
 
     public void LoadLevel()

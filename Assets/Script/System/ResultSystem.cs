@@ -58,7 +58,10 @@ public class ResultSystem : MonoBehaviour
 
     private void ShowResult()
     {
-        UIManager.Instance.ShowInGameMenuPanel();
+        var inGameUI = UIManager.Instance as InGameUIManager;
+        if (inGameUI != null)
+            inGameUI.ShowInGameMenuPanel();
+
         UIManager.Instance.ChangeUIType(EUIType.Result);
     }
 

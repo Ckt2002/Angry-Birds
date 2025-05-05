@@ -2,7 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIButton : MonoBehaviour, IUIButton
+public class UIButton : MonoBehaviour, IUIButton, IUIButtonClickEffect
+    , IUIButtonMouseEnterEffect, IUIButtonMouseOutEffect
 {
     protected Button button;
 
@@ -13,13 +14,10 @@ public class UIButton : MonoBehaviour, IUIButton
 
     protected virtual void Start()
     {
-        button?.onClick.AddListener(() =>
-        {
-            Effect();
-        });
+        button?.onClick.AddListener(ClickEffect);
     }
 
-    public virtual void Effect()
+    public virtual void ClickEffect()
     {
         Sequence sequence = DOTween.Sequence();
 
@@ -32,5 +30,15 @@ public class UIButton : MonoBehaviour, IUIButton
     public virtual void Action()
     {
         Debug.Log("Action");
+    }
+
+    public virtual void MouseEnterEffect()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual void MouseExitEffect()
+    {
+        throw new System.NotImplementedException();
     }
 }

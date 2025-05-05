@@ -1,41 +1,35 @@
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager Instance { get; private set; }
+    public static UIManager Instance;
+
     public Action<EUIType, Action, Action<UIPanel>> OnUIChange;
     public Action OnCloseAllUI;
 
-    [SerializeField] private GameObject inGameMenuPanel;
-    private IUIHide generalPanel;
-    private Stack<UIPanel> panelStack;
+    protected Stack<UIPanel> panelStack;
+    protected EUIType currentType = EUIType.None;
 
-    EUIType currentType = EUIType.None;
-
-    private void Awake()
+    protected virtual void Awake()
     {
         if (Instance == null)
             Instance = this;
         else
-            Destroy(gameObject);
+            Destroy(Instance);
 
         panelStack = new Stack<UIPanel>();
     }
 
-    private void Start()
+    protected virtual void Start()
     {
-        generalPanel = GetComponentInChildren<IUIHide>(true);
-        OnCloseAllUI += generalPanel.HideUI;
-        Transform panelTransform = (generalPanel as Component)?.transform;
-        foreach (Transform child in panelTransform)
-            OnUIChange += child.GetComponent<UIPanel>().HandleUITypeChanged;
     }
 
-    public void ShowInGameMenuPanel()
+    protected void GetChildrenPanel(Transform parent)
     {
-        inGameMenuPanel?.SetActive(true);
+        foreach (Transform child in parent)
+            OnUIChange += child.GetComponent<UIPanel>().HandleUITypeChanged;
     }
 
     public void ChangeUIType(EUIType newType)
@@ -88,8 +82,11 @@ public class UIManager : MonoBehaviour
             return;
         }
 
+        // Hide current panel
         var currentPanel = panelStack.Pop();
         currentPanel.HideUI(null);
+
+        // Show prev panel
         panelStack.Peek().ShowUI(null);
     }
 }

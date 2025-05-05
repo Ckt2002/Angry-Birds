@@ -3668,8 +3668,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIType: 2
-  rectTransform: {fileID: 685294626}
-  hidePos: {x: 0, y: 1000}
 --- !u!1 &704172621
 GameObject:
   m_ObjectHideFlags: 0
@@ -5453,7 +5451,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148203274}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 275f5a474ec04edeb1264b7b652c687a, type: 3}
   m_Name: 
@@ -5629,8 +5627,8 @@ Transform:
   - {fileID: 594501097}
   - {fileID: 506598985}
   - {fileID: 1642615653}
-  - {fileID: 374156551}
   - {fileID: 1036469210}
+  - {fileID: 374156551}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1171367708
@@ -8267,6 +8265,8 @@ MonoBehaviour:
   UIType: 5
   rectTransform: {fileID: 1558660385}
   hidePos: {x: 0, y: 1000}
+  rectTransform: {fileID: 1558660385}
+  hidePos: {x: 0, y: 1000}
   starsParent: {fileID: 834773322}
 --- !u!1 &1569164473
 GameObject:
@@ -8450,8 +8450,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIType: 3
-  rectTransform: {fileID: 1578525299}
-  hidePos: {x: 0, y: 1000}
 --- !u!1 &1603550799
 GameObject:
   m_ObjectHideFlags: 0
@@ -9949,7 +9947,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1853747082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c98a4cf23e046e40beea81791e612cc, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a6c9e77c6a61a4784fac41ba610887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inGameMenuPanel: {fileID: 1569164473}
