@@ -8,6 +8,7 @@ public abstract class BirdController : MonoBehaviour
     public EBirdType birdType;
     public Rigidbody2D rb2D;
 
+    protected SoundManager soundManager;
     protected BirdStateMachine stateMachine;
     protected IBirdAnim anim;
     protected new string name;
@@ -17,6 +18,11 @@ public abstract class BirdController : MonoBehaviour
         stateMachine = GetComponent<BirdStateMachine>();
         rb2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<IBirdAnim>();
+    }
+
+    private void Start()
+    {
+        soundManager = SoundManager.Instance;
     }
 
     private void OnEnable()
@@ -40,7 +46,7 @@ public abstract class BirdController : MonoBehaviour
 
     public void BirdGetReadyState(Vector2 readyPos)
     {
-        stateMachine.ChangeState(new BirdReadyState(this, readyPos));
+        stateMachine.ChangeState(new BirdReadyState(this, readyPos, soundManager));
     }
 
     public void BirdDragState()
@@ -53,7 +59,7 @@ public abstract class BirdController : MonoBehaviour
     {
         if (!launched)
         {
-            stateMachine.ChangeState(new BirdLaunchState(rb2D, launchForce, anim));
+            stateMachine.ChangeState(new BirdLaunchState(rb2D, launchForce, anim, soundManager));
             launched = true;
         }
     }
@@ -61,7 +67,7 @@ public abstract class BirdController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (launched)
-            stateMachine.ChangeState(new BirdColliedState(this, anim, name));
+            stateMachine.ChangeState(new BirdColliedState(this, anim, name, soundManager));
     }
 
     protected void Reset()

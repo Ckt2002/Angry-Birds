@@ -46,10 +46,8 @@ public class ResultSystem : MonoBehaviour
                 resultStar = 3;
             else if (objectsActivation.birdsRemain >= requireTwoStar)
                 resultStar = 2;
-            else if (objectsActivation.birdsRemain >= requireOneStar)
-                resultStar = 1;
             else
-                resultStar = 0;
+                resultStar = 1;
 
             UpdateLevelManager();
             ShowResult();
@@ -72,6 +70,7 @@ public class ResultSystem : MonoBehaviour
 
         lst[currentLevel - 1].StarNumber = resultStar;
         // Unlock next level
-        lst[currentLevel].IsLocked = false;
+        if (currentLevel < GameStat.Instance.maxLevel)
+            lst[currentLevel].IsLocked = false;
     }
 }

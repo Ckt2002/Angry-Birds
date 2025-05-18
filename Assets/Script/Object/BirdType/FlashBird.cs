@@ -13,5 +13,7 @@ public class FlashBird : BirdController
         // Run particle
         var particle = ParticlePoolingSystem.Instance.GetParticle(name);
         particle?.RunParticle(transform.position);
+
+        soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.BirdSkill);
     }
 }

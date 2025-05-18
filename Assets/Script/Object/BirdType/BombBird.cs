@@ -17,8 +17,10 @@ namespace Script.Object.BirdType
 
         IEnumerator HandleSpecialSkill()
         {
+            soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.BirdSkill);
             var particle = ParticlePoolingSystem.Instance.GetParticle(name);
             particle?.RunParticle(transform.position);
+            soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.BirdExplode);
 
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explodeRange);
 

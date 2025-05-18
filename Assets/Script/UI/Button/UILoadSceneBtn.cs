@@ -8,6 +8,7 @@ public class UILoadSceneBtn : UIButton, IPointerEnterHandler, IPointerExitHandle
 
     public override void Action()
     {
+        base.Action();
         SceneSystem.Instance?.LoadScene((int)sceneToLoad);
     }
 

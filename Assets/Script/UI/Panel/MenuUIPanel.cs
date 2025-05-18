@@ -4,7 +4,7 @@ public class MenuUIPanel : UIPanel
 {
     private IUIButtonShowEffect[] buttons;
 
-    private void Start()
+    protected virtual void Start()
     {
         if (UIType == EUIType.Menu)
             UIManager.Instance?.AddPanelToStack(this);

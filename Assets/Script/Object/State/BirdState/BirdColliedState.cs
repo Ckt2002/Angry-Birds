@@ -8,12 +8,15 @@ public class BirdColliedState : IBirdState
     private ParticlePoolingSystem particlePoolingSystem;
     private IBirdAnim anim;
     private string name;
+    private SoundManager soundManager;
 
-    public BirdColliedState(BirdController bird, IBirdAnim anim, string name)
+    public BirdColliedState(BirdController bird, IBirdAnim anim
+        , string name, SoundManager soundManager)
     {
         this.bird = bird;
         this.anim = anim;
         this.name = name;
+        this.soundManager = soundManager;
         particlePoolingSystem = ParticlePoolingSystem.Instance;
     }
 
@@ -39,6 +42,7 @@ public class BirdColliedState : IBirdState
         yield return new WaitForSeconds(3f);
         ResultSystem.Instance.CheckResult();
         particle?.RunParticle(go.transform.position);
+        soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.BirdDestroy);
         go.SetActive(false);
         Exit();
     }
@@ -56,5 +60,6 @@ public class BirdColliedState : IBirdState
             bird = null;
             particlePoolingSystem = null;
         }
+        soundManager = null;
     }
 }

@@ -1,12 +1,10 @@
-﻿using DG.Tweening;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class UILoadLevelBtn : UIButton
 {
     [SerializeField] private Image lockIcon;
-    [SerializeField] private TMP_Text levelText;
+    [SerializeField] private Text levelText;
     [SerializeField] private Image[] starIcons;
     [SerializeField] private Sprite[] starSprites;
 
@@ -17,17 +15,6 @@ public class UILoadLevelBtn : UIButton
     protected override void Start()
     {
         base.Start();
-    }
-
-    public void ShowButton()
-    {
-        transform.localScale = Vector3.zero;
-
-        Sequence sequence = DOTween.Sequence();
-        sequence.Append(transform.DOScale(1.2f, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
-        {
-            transform.DOScale(1, 0.5f).SetEase(Ease.OutBounce);
-        }));
     }
 
     public void SetUpBtn(int level, bool locked, int starNumber = 0)
@@ -48,9 +35,11 @@ public class UILoadLevelBtn : UIButton
 
     public override void Action()
     {
+        base.Action();
         if (levelLocked)
             return;
 
+        SoundManager.Instance.StopSystemAudio();
         SceneSystem.Instance.LoadLevel(level);
     }
 }

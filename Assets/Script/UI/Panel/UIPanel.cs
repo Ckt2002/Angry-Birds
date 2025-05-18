@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using UnityEngine;
 
@@ -24,9 +25,15 @@ public class UIPanel : MonoBehaviour
 
     public virtual void ShowUI(Action<UIPanel> updateStackAct)
     {
+        SoundManager.Instance.PlayUIAudio((int)EUIAudioClip.PanelAppear, false);
     }
 
     protected virtual void ShowUIOnComplete()
     {
+    }
+
+    protected void OnDestroy()
+    {
+        DOTween.KillAll(true);
     }
 }

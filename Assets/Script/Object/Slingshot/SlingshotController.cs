@@ -8,16 +8,18 @@ public class SlingshotController : MonoBehaviour
     [SerializeField] private SlingshotInputHandler inputHandler;
     [SerializeField] private SlingshotLauncher launcher;
 
+    private SoundManager soundManager;
     private BirdProviderSystem birdProviderSystem;
     private Vector2 readyPos;
     private BirdController currentBird;
     private bool isDragging = false;
+    private bool soundPlayed = false;
 
     private void Start()
     {
         birdProviderSystem = BirdProviderSystem.Instance;
+        soundManager = SoundManager.Instance;
         readyPos = readyTransform.position;
-
         ropeVisual.Initialize(readyPos);
     }
 
@@ -74,6 +76,11 @@ public class SlingshotController : MonoBehaviour
         currentBird.BirdDragState();
         currentBird.transform.position = CalculateBirdPosition(mousePos);
         ropeVisual.UpdateRope(currentBird.transform.position);
+        if (!soundPlayed)
+        {
+            soundManager.PlaySFX((int)ESFXAudioClip.SlingshotStreched);
+            soundPlayed = true;
+        }
     }
 
     public Vector2 CalculateLaunchForce(Vector2 birdPos)
@@ -91,6 +98,8 @@ public class SlingshotController : MonoBehaviour
         var launchForceFinal = CalculateLaunchForce(birdPos);
         currentBird.GetComponent<BirdController>().BirdLaunchState(launchForceFinal);
         ropeVisual.ResetRope();
+        soundPlayed = false;
+        soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.BirdShot);
         StartCoroutine(GetNextBird());
     }
 

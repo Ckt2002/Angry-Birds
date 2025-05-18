@@ -42,8 +42,14 @@ public class UIStar : MonoBehaviour, IUIStar
             );
 
         sequence.Join(
-            transform.DORotate(new Vector3(0, 0, -360), 1f, RotateMode.FastBeyond360).SetEase(Ease.OutQuad)
+            transform.DORotate(new Vector3(0, 0, -360), 1f, RotateMode.FastBeyond360)
+            .SetEase(Ease.OutQuad)
             );
+
+        sequence.OnComplete(() =>
+        {
+            SoundManager.Instance.PlayUIAudio((int)EUIAudioClip.GetStar, false);
+        });
 
         if (action != null)
         {

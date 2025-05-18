@@ -10,6 +10,7 @@ public class TripleBird : BirdController
         var baseVelocity = rb2D.linearVelocity;
         var particle = ParticlePoolingSystem.Instance.GetParticle(name);
         particle?.RunParticle(transform.position);
+        soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.BirdSkill);
         anim.RunSpecialSkill();
 
         var bird1 = CreateBird(spreadAngle, baseVelocity);

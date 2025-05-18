@@ -6,4 +6,5 @@ public enum EUIType
     Setting,
     Levels,
     Result,
+    Tutorial,
 }

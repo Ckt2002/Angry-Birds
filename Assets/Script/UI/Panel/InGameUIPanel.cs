@@ -10,6 +10,11 @@ public class InGameUIPanel : UIPanel
     public override void ShowUI(Action<UIPanel> updateStackAct)
     {
         base.ShowUI(updateStackAct);
+        ShowAnimation(updateStackAct);
+    }
+
+    protected virtual void ShowAnimation(Action<UIPanel> updateStackAct)
+    {
         gameObject.SetActive(true);
         rectTransform.localPosition = hidePos;
         rectTransform.DOLocalMove(Vector2.zero, 1.5f)
@@ -30,6 +35,11 @@ public class InGameUIPanel : UIPanel
     public override void HideUI(Action closeGeneralPanelAct)
     {
         base.HideUI(closeGeneralPanelAct);
+        HideAnimation(closeGeneralPanelAct);
+    }
+
+    protected virtual void HideAnimation(Action closeGeneralPanelAct)
+    {
         rectTransform.DOLocalMove(hidePos, 0.5f)
             .SetEase(Ease.InSine)
             .SetLink(gameObject)

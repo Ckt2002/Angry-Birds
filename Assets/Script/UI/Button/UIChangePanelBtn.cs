@@ -8,6 +8,7 @@ public class UIChangePanelBtn : UIButton, IPointerEnterHandler, IPointerExitHand
 
     public override void Action()
     {
+        base.Action();
         UIManager.Instance?.ChangeUIType(UITypeToChange);
     }
 

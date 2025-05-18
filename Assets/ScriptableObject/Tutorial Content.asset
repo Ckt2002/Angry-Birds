@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f4e91d756ec2c4d8a98aedae369164, type: 3}
+  m_Name: Tutorial Content
+  m_EditorClassIdentifier: 
+  tutorialData:
+  - image: {fileID: 2902303139503406127, guid: 812cd53e76f7a7d468155d41f7dc7933, type: 3}
+    description: Click on the bird, drag then release
+  - image: {fileID: -939637804178890696, guid: e165f7e2807965c438cf98c7c6361e2a, type: 3}
+    description: Press 'Space' to active bird's skill
