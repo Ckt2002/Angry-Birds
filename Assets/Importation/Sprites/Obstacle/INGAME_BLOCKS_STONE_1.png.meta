@@ -1,0 +1,1248 @@
+fileFormatVersion: 2
+guid: 0c83250fd3ba94141ac6e0f64cc0f509
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7270109889279808579
+    second: INGAME_BLOCKS_STONE_1_0
+  - first:
+      213: 8092952528055794977
+    second: INGAME_BLOCKS_STONE_1_1
+  - first:
+      213: 5143122937122598853
+    second: INGAME_BLOCKS_STONE_1_2
+  - first:
+      213: -2303407958262802012
+    second: INGAME_BLOCKS_STONE_1_3
+  - first:
+      213: -7548349848724072699
+    second: INGAME_BLOCKS_STONE_1_4
+  - first:
+      213: 4006959986319639957
+    second: INGAME_BLOCKS_STONE_1_5
+  - first:
+      213: -8825916598537675811
+    second: INGAME_BLOCKS_STONE_1_6
+  - first:
+      213: -4330820153214443686
+    second: INGAME_BLOCKS_STONE_1_7
+  - first:
+      213: 8745181242086256260
+    second: INGAME_BLOCKS_STONE_1_8
+  - first:
+      213: -8451848749819698479
+    second: INGAME_BLOCKS_STONE_1_9
+  - first:
+      213: 6487029597017157503
+    second: INGAME_BLOCKS_STONE_1_10
+  - first:
+      213: -805254841510174944
+    second: INGAME_BLOCKS_STONE_1_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 297
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12d7dda2271ff4070800000000000000
+      internalID: 8092952528055794977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 213
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf2b57df0b006740800000000000000
+      internalID: 5143122937122598853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_5
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 300
+        width: 81
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59549c5b0e49b9730800000000000000
+      internalID: 4006959986319639957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_6
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 218
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb10f68d9b048580800000000000000
+      internalID: -8825916598537675811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_7
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 218
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5fdc8d2406d5e3c0800000000000000
+      internalID: -4330820153214443686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_8
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 129
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ee5f671002d5970800000000000000
+      internalID: 8745181242086256260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_9
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 46
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2eaa3875005ba80800000000000000
+      internalID: -8451848749819698479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_10
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 192
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f27a97c0f860a50800000000000000
+      internalID: 6487029597017157503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_11
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 60
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f5f12fcf823d4f0800000000000000
+      internalID: -805254841510174944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_0
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 300
+        width: 81
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865f7042da26a3f4db3b9f9853f750f4
+      internalID: -896995623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_3
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 300
+        width: 81
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b186a940c46584eaca0931adb75dbe
+      internalID: 1608923221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_4
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 300
+        width: 81
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52609f84e65af5d4bb254e396cdb1564
+      internalID: 1250695774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_12
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 225
+        width: 78
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ca97fcc2097cf45b8a32747bac6e09
+      internalID: 1710796365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 150
+        width: 78
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c020ee45f71e1d24c85827bdc51ca883
+      internalID: 1581576915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_14
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 75
+        width: 78
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c779fdf4b64add24499cc15f601a0a74
+      internalID: 1642516901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_15
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 78
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae70971ccb3655d4b936e21753f76959
+      internalID: 1099858700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_16
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 257
+        width: 85
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8359c8150a224434ca62a7af139b85b2
+      internalID: 1687693589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_17
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 257
+        width: 85
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd392e7ddc0b9c541a4cf4a6d65b2cec
+      internalID: -428717290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_18
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 257
+        width: 85
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d0e58706ba86342890cf1875cc69a0
+      internalID: 139028837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_19
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 214
+        width: 85
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68489e1f5e89b6a48a0be10d3b1089af
+      internalID: -46799256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_20
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 214
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789bdeb4640d4a342a0f15c23f5d85f2
+      internalID: 1387264748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_21
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 214
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4ba141da8a590428282f5b69795f77
+      internalID: -746408005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_22
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 170
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad2569aeca701540a7253b13c4266fc
+      internalID: 1375805949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_23
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 148
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60087b640e65ca845993c559a021a3b3
+      internalID: -678822163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_24
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 126
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c38824b1388934f8d88f27d80ba97e
+      internalID: 1019496722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_25
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 60
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e232f8732ff28eb45beed1892db0180c
+      internalID: -1515235777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_26
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 38
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4910de4109f69c947a5bea7fc522ae53
+      internalID: -1773639781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_27
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 16
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e09bb2876e47c147bf702d9f76077bf
+      internalID: 1744235779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7da7f6fd0550e42abb21b69185e450
+      internalID: -698947325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 130
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd8772c490105644a782994a40d956c
+      internalID: 1100634359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccd03c977a1db14795a49d04fb6c208
+      internalID: 2115921496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 298
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc828a261f291d4b838539c59e081f8
+      internalID: -2102562363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_32
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 193
+        width: 205
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42892cf2e02b9c54ab67dc0805caf2fb
+      internalID: -809045544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_33
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 171
+        width: 205
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba574c3c6eac33849bb17e4e522ce1d9
+      internalID: -279716679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_34
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 149
+        width: 205
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6c6b8b773282d4f954e78f950f0c19
+      internalID: -668803874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_35
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 127
+        width: 205
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf46060eae990d4cace2cc52b272d86
+      internalID: -2028928945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_36
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 104
+        width: 169
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92deaa3abba079e449330ba272704493
+      internalID: 2032669181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_37
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 82
+        width: 169
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b4dfcb6ff4d504293925eccd7cde6e
+      internalID: -1576527311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_38
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 60
+        width: 169
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45775f851eee58544bb2a4624c38ad53
+      internalID: 925290261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_39
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 38
+        width: 169
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e10539e348e6724a8ab65d51af8fcaf
+      internalID: 635414219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_40
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 104
+        width: 83
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98b932799842d049858b76ab63de004
+      internalID: -591083277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_41
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 82
+        width: 83
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1836161ac8389340a2121230abcb022
+      internalID: 1875557725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_42
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 4
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88b9d40c8254be41a8b9437231099cc
+      internalID: 1993882393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_43
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab65c0b67487ba4691b885063cb1b67
+      internalID: -881990057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 8
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab88c106303301f449f127e7c980a5ae
+      internalID: -846656631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_45
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 8
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db40540ac1808f4a87b806da8ad1cce
+      internalID: -164770884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_46
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 17
+        width: 83
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a2e0bd1e4efaf4b98a3a53b68a29f9
+      internalID: 1623368687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_STONE_1_47
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 17
+        width: 83
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53afa36fa4138bb43880cb6dff8c3470
+      internalID: -1358343949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b1f4b508d0481d544aaa03c54690bd96
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      INGAME_BLOCKS_STONE_1_0: -896995623
+      INGAME_BLOCKS_STONE_1_12: 1710796365
+      INGAME_BLOCKS_STONE_1_13: 1581576915
+      INGAME_BLOCKS_STONE_1_14: 1642516901
+      INGAME_BLOCKS_STONE_1_15: 1099858700
+      INGAME_BLOCKS_STONE_1_16: 1687693589
+      INGAME_BLOCKS_STONE_1_17: -428717290
+      INGAME_BLOCKS_STONE_1_18: 139028837
+      INGAME_BLOCKS_STONE_1_19: -46799256
+      INGAME_BLOCKS_STONE_1_20: 1387264748
+      INGAME_BLOCKS_STONE_1_21: -746408005
+      INGAME_BLOCKS_STONE_1_22: 1375805949
+      INGAME_BLOCKS_STONE_1_23: -678822163
+      INGAME_BLOCKS_STONE_1_24: 1019496722
+      INGAME_BLOCKS_STONE_1_25: -1515235777
+      INGAME_BLOCKS_STONE_1_26: -1773639781
+      INGAME_BLOCKS_STONE_1_27: 1744235779
+      INGAME_BLOCKS_STONE_1_28: -698947325
+      INGAME_BLOCKS_STONE_1_29: 1100634359
+      INGAME_BLOCKS_STONE_1_3: 1608923221
+      INGAME_BLOCKS_STONE_1_30: 2115921496
+      INGAME_BLOCKS_STONE_1_31: -2102562363
+      INGAME_BLOCKS_STONE_1_32: -809045544
+      INGAME_BLOCKS_STONE_1_33: -279716679
+      INGAME_BLOCKS_STONE_1_34: -668803874
+      INGAME_BLOCKS_STONE_1_35: -2028928945
+      INGAME_BLOCKS_STONE_1_36: 2032669181
+      INGAME_BLOCKS_STONE_1_37: -1576527311
+      INGAME_BLOCKS_STONE_1_38: 925290261
+      INGAME_BLOCKS_STONE_1_39: 635414219
+      INGAME_BLOCKS_STONE_1_4: 1250695774
+      INGAME_BLOCKS_STONE_1_40: -591083277
+      INGAME_BLOCKS_STONE_1_41: 1875557725
+      INGAME_BLOCKS_STONE_1_42: 1993882393
+      INGAME_BLOCKS_STONE_1_43: -881990057
+      INGAME_BLOCKS_STONE_1_44: -846656631
+      INGAME_BLOCKS_STONE_1_45: -164770884
+      INGAME_BLOCKS_STONE_1_46: 1623368687
+      INGAME_BLOCKS_STONE_1_47: -1358343949
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

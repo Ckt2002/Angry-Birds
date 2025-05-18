@@ -1,0 +1,1281 @@
+fileFormatVersion: 2
+guid: 6c4cca5f469b27143a32f4ebb327243f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1524558012044886953
+    second: Glass_Block_Sheet_0
+  - first:
+      213: -4992640093006614289
+    second: Glass_Block_Sheet_1
+  - first:
+      213: -4949169752739550235
+    second: Glass_Block_Sheet_2
+  - first:
+      213: 508209093686879
+    second: Glass_Block_Sheet_3
+  - first:
+      213: -6195571608183597480
+    second: Glass_Block_Sheet_4
+  - first:
+      213: -2878321332854796767
+    second: Glass_Block_Sheet_5
+  - first:
+      213: -6765408865748975833
+    second: Glass_Block_Sheet_6
+  - first:
+      213: -4995067133717348551
+    second: Glass_Block_Sheet_7
+  - first:
+      213: 8974771865587723721
+    second: Glass_Block_Sheet_8
+  - first:
+      213: 8924405492438023969
+    second: Glass_Block_Sheet_9
+  - first:
+      213: -6933987044080229016
+    second: Glass_Block_Sheet_10
+  - first:
+      213: -4336077917591060919
+    second: Glass_Block_Sheet_11
+  - first:
+      213: -3628295044717469273
+    second: Glass_Block_Sheet_12
+  - first:
+      213: -863922411064663423
+    second: Glass_Block_Sheet_13
+  - first:
+      213: -7712849722106202662
+    second: Glass_Block_Sheet_14
+  - first:
+      213: -1219426852322158375
+    second: Glass_Block_Sheet_15
+  - first:
+      213: -5055039328569347977
+    second: Glass_Block_Sheet_16
+  - first:
+      213: -8643306617437230392
+    second: Glass_Block_Sheet_17
+  - first:
+      213: 8899976554802294150
+    second: Glass_Block_Sheet_18
+  - first:
+      213: 6605570669405018779
+    second: Glass_Block_Sheet_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 307
+        width: 84
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3496b3f61582510800000000000000
+      internalID: 1524558012044886953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 306
+        width: 84
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe0b7fc994496bab0800000000000000
+      internalID: -4992640093006614289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 308
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ebe9dae454015bb0800000000000000
+      internalID: -4949169752739550235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 308
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f563086a63ec10000800000000000000
+      internalID: 508209093686879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 309
+        width: 82
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85698b9a278e40aa0800000000000000
+      internalID: -6195571608183597480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 309
+        width: 82
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ec2cd6ff52e08d0800000000000000
+      internalID: -2878321332854796767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 222
+        width: 84
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ff0c43b707c12a0800000000000000
+      internalID: -6765408865748975833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 233
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f7c8928e4fdaab0800000000000000
+      internalID: -4995067133717348551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 264
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cda68c167bcc8c70800000000000000
+      internalID: 8974771865587723721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 264
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f3058038bd9db70800000000000000
+      internalID: 8924405492438023969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 138
+        width: 84
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 865ef60758785cf90800000000000000
+      internalID: -6933987044080229016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 158
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94eb1938b1823d3c0800000000000000
+      internalID: -4336077917591060919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 46
+        width: 43
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a12e4f51e4b5adc0800000000000000
+      internalID: -3628295044717469273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 220
+        width: 85
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182edf6f42bb204f0800000000000000
+      internalID: -863922411064663423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 220
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad5b3ebca0476f490800000000000000
+      internalID: -7712849722106202662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 54
+        width: 84
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8d3c51db9b31fe0800000000000000
+      internalID: -1219426852322158375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 81
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770befe6384e8d9b0800000000000000
+      internalID: -5055039328569347977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 9
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8caeed6fc6ecc0880800000000000000
+      internalID: -8643306617437230392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 9
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68dab42c581138b70800000000000000
+      internalID: 8899976554802294150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 5
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a10a8a683bbab50800000000000000
+      internalID: 6605570669405018779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223
+        width: 84
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180e07bc8abc59e48b992681b3efeace
+      internalID: 1380311870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138
+        width: 84
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a788f4644c2b2240b68bf06d9d9df79
+      internalID: 1010911869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 84
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c565cbc748928294d8d389743cca9c01
+      internalID: 726254722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 220
+        width: 85
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61aae6d63c576143a878965e9e84d67
+      internalID: 2012098745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 220
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6218319576ccb4781cd6af7873977f
+      internalID: 390770343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 265
+        width: 85
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ac41c8a422d6b44837c7276de5f628
+      internalID: 1131681101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 265
+        width: 85
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bd08220c23a484c8e475a0b318c4b1
+      internalID: 1985729241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 112
+        width: 43
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dbaa7e6a15d2f942ab13c1a3100b11f
+      internalID: 1065610553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 177
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44731b89a598f2b4287b0022e45ee405
+      internalID: -1222781302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 134
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c29cf98dd33f7c4587a2b5db4861726
+      internalID: 1870529933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 90
+        width: 43
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9c1129e1eec5a4491a02fbc9baad5e
+      internalID: -232501839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 68
+        width: 43
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f898f562a52f6f428ed03f3dfe7f86c
+      internalID: 1680975841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 32
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9e7d8e01cd5774a9309bf909cd6cf9
+      internalID: 1349250823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 10
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504807f6169ae5b46bf02fc6e3c3ffe3
+      internalID: -1514451552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 32
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9facb0fabf20b4b81ef9f9db35e395
+      internalID: -2054470388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 10
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a69cc9d02796742913414e85063d61
+      internalID: 295884762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 198
+        width: 207
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffc401c8d5824d48b4c637b201b6cbe
+      internalID: -1021695780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 176
+        width: 207
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f8296f9cd91c846bcb212497e17a29
+      internalID: 1744508965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 154
+        width: 207
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d4fe1f5145d494c9c38f9d20823c43
+      internalID: 1770790604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 132
+        width: 207
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0977a3f1f94831643a852eb6e2f4f78b
+      internalID: 341799950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 109
+        width: 171
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bd7122f101e1f4f9f25b1cf9536fae
+      internalID: 917880869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 87
+        width: 171
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb6c40a9468b594c981553ad0372980
+      internalID: -728019539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 65
+        width: 171
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f736fdfa8e4f7df42b85ab81aea0003e
+      internalID: 1806096355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 44
+        width: 171
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17bf91446ba94d459ef5e1a05fd8a72
+      internalID: -472469517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 22
+        width: 85
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776dd45b33063364eb79100d7a9e7d5f
+      internalID: -1096095479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 22
+        width: 85
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62edbf15188997244a2fb18eba9df095
+      internalID: -1228065040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 85
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0273532bca5ec49a3aabb9d78799da
+      internalID: 1673268002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_Block_Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 85
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205c1bef1f2108045a829ed9151a91ed
+      internalID: 676549139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 24ad6b44856dae4429f6edab87caeb96
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Glass_Block_Sheet_0: 1524558012044886953
+      Glass_Block_Sheet_1: -4992640093006614289
+      Glass_Block_Sheet_10: -6933987044080229016
+      Glass_Block_Sheet_11: -4336077917591060919
+      Glass_Block_Sheet_12: -3628295044717469273
+      Glass_Block_Sheet_13: -863922411064663423
+      Glass_Block_Sheet_14: -7712849722106202662
+      Glass_Block_Sheet_15: -1219426852322158375
+      Glass_Block_Sheet_16: -5055039328569347977
+      Glass_Block_Sheet_17: -8643306617437230392
+      Glass_Block_Sheet_18: 8899976554802294150
+      Glass_Block_Sheet_19: 6605570669405018779
+      Glass_Block_Sheet_2: -4949169752739550235
+      Glass_Block_Sheet_20: 1380311870
+      Glass_Block_Sheet_21: 1010911869
+      Glass_Block_Sheet_22: 726254722
+      Glass_Block_Sheet_23: 2012098745
+      Glass_Block_Sheet_24: 390770343
+      Glass_Block_Sheet_25: 1131681101
+      Glass_Block_Sheet_26: 1985729241
+      Glass_Block_Sheet_27: 1065610553
+      Glass_Block_Sheet_28: -1222781302
+      Glass_Block_Sheet_29: 1870529933
+      Glass_Block_Sheet_3: 508209093686879
+      Glass_Block_Sheet_30: -232501839
+      Glass_Block_Sheet_31: 1680975841
+      Glass_Block_Sheet_32: 1349250823
+      Glass_Block_Sheet_33: -1514451552
+      Glass_Block_Sheet_34: -2054470388
+      Glass_Block_Sheet_35: 295884762
+      Glass_Block_Sheet_36: -1021695780
+      Glass_Block_Sheet_37: 1744508965
+      Glass_Block_Sheet_38: 1770790604
+      Glass_Block_Sheet_39: 341799950
+      Glass_Block_Sheet_4: -6195571608183597480
+      Glass_Block_Sheet_40: 917880869
+      Glass_Block_Sheet_41: -728019539
+      Glass_Block_Sheet_42: 1806096355
+      Glass_Block_Sheet_43: -472469517
+      Glass_Block_Sheet_44: -1096095479
+      Glass_Block_Sheet_45: -1228065040
+      Glass_Block_Sheet_46: 1673268002
+      Glass_Block_Sheet_47: 676549139
+      Glass_Block_Sheet_5: -2878321332854796767
+      Glass_Block_Sheet_6: -6765408865748975833
+      Glass_Block_Sheet_7: -4995067133717348551
+      Glass_Block_Sheet_8: 8974771865587723721
+      Glass_Block_Sheet_9: 8924405492438023969
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

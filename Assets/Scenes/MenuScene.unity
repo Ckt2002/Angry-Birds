@@ -619,6 +619,8 @@ MonoBehaviour:
   parent: {fileID: 1642615653}
   particlePrefabs:
   - {fileID: 724022732763876156, guid: d99bc19b26c53fe4b9564b1ac647e3cc, type: 3}
+  - {fileID: 724022732763876156, guid: 72a12a617a77eb8409592d16163b3c2b, type: 3}
+  - {fileID: 724022732763876156, guid: 0d145b41026099240a62bcd0737c1349, type: 3}
 --- !u!114 &275428939
 MonoBehaviour:
   m_ObjectHideFlags: 0
