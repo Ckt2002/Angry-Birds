@@ -18,7 +18,7 @@ public class CsvLevelSystem : MonoBehaviour
 
         string[] lines = csvData.text.Split('\n');
 
-        for (int i = 2; i < 7; i++)
+        for (int i = 2; i < 12; i++)
         {
             if (string.IsNullOrEmpty(lines[i]))
                 continue;

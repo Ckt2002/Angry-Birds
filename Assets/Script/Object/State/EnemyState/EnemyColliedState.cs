@@ -8,11 +8,12 @@ public class EnemyColliedState : IEnemyState
     private ObjectsActivation objectsActivation;
     private SoundManager soundManager;
 
-    public EnemyColliedState(EnemyController enemyController, SoundManager soundManager)
+    public EnemyColliedState(EnemyController enemyController
+        , SoundManager soundManager, ObjectsActivation objectsActivation)
     {
         this.enemyController = enemyController;
         particlePoolingSystem = ParticlePoolingSystem.Instance;
-        objectsActivation = ObjectsActivation.Instance;
+        this.objectsActivation = objectsActivation;
         this.soundManager = soundManager;
     }
 
@@ -24,7 +25,6 @@ public class EnemyColliedState : IEnemyState
         if (objectsActivation == null)
             objectsActivation = ObjectsActivation.Instance;
 
-        objectsActivation?.EnemiesNumReduce();
         enemyController.StartCoroutine(DieStatus());
     }
 
@@ -35,6 +35,12 @@ public class EnemyColliedState : IEnemyState
         particle.RunParticle(enemyController.transform.position);
         soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.PigDamage);
         yield return new WaitForSeconds(0.1f);
+
+        if (objectsActivation == null)
+        {
+            objectsActivation = ObjectsActivation.Instance;
+        }
+        objectsActivation.EnemiesNumReduce();
         Exit();
         go.SetActive(false);
     }

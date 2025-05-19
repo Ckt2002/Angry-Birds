@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5980762561633062498}
   m_Layer: 0
   m_Name: Wood_Block_Sheet_38
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c3b479d71c6acb245894461a50c5c1ef, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 0bf649832b60b8f4dad3a32ac90d72ab, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_Size: {x: 1.71, y: 0.23}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &-8412249966584482125
@@ -155,20 +155,23 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.71, y: 0.23}
+    newSize: {x: 1.71, y: 0.23}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: -0.73499995, y: 0.114999995}
+      - {x: -0.825, y: 0.105}
+      - {x: -0.85499996, y: 0.085}
+      - {x: -0.85499996, y: -0.095}
+      - {x: -0.79499996, y: -0.114999995}
+      - {x: 0.85499996, y: -0.114999995}
+      - {x: 0.85499996, y: 0.095}
+      - {x: 0.835, y: 0.114999995}
   m_UseDelaunayMesh: 0
 --- !u!114 &-893191332007397104
 MonoBehaviour:
@@ -183,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleType: 37
-  velocityThreshold: 1.9
+  velocityThreshold: 3
 --- !u!114 &-5980762561633062498
 MonoBehaviour:
   m_ObjectHideFlags: 0

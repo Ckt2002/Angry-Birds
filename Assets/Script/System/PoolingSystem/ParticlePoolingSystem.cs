@@ -42,10 +42,12 @@ public class ParticlePoolingSystem : MonoBehaviour
     {
         if (particleDictionary.ContainsKey(particleName))
             foreach (var item in particleDictionary[particleName])
+            {
                 if (!item.gameObject.activeInHierarchy)
                     return item;
-
-        Debug.LogWarning("Name doesn't exist in particle dictionary");
+            }
+        else
+            Debug.LogWarning($"Name '{particleName}' doesn't exist in particle dictionary");
         return null;
     }
 }

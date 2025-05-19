@@ -16,6 +16,7 @@ public class ObjectsActivation : MonoBehaviour
     }
 
     public void InitializationEnemies(int spawnedNumber) => enemiesRemain = spawnedNumber;
+
     public void InitializationBirds(int spawnedNumber)
     {
         birdsRemain = spawnedNumber;
@@ -25,6 +26,7 @@ public class ObjectsActivation : MonoBehaviour
     {
         enemiesRemain--;
     }
+
     public void BirdsNumReduce()
     {
         birdsRemain--;

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ObstacleController : MonoBehaviour
 {
@@ -19,8 +19,6 @@ public class ObstacleController : MonoBehaviour
             particleName = ObstacleNames.Glass;
         else if (name.Contains(ObstacleNames.Stone))
             particleName = ObstacleNames.Stone;
-
-
     }
 
     private void Start()
@@ -43,12 +41,5 @@ public class ObstacleController : MonoBehaviour
         }
         else if (explosiveDistance > 0 && explosiveDistance <= 4f)
             stateMachine?.ChangeState(new ObstatcleExplosionState(rb2D, explosionForce, direction));
-    }
-
-    [ContextMenu("Set enum")]
-    public void SetEnum()
-    {
-        EObstacleType.TryParse(gameObject.name, ignoreCase: true, out EObstacleType parsedType);
-        obstacleType = parsedType;
     }
 }

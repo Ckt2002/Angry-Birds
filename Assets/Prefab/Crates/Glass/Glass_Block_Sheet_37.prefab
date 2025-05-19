@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 7627873962945298116}
   - component: {fileID: 6677747418697271597}
   - component: {fileID: 424476546373514525}
-  - component: {fileID: 4775134428725146983}
+  - component: {fileID: -2201857938020319925}
   - component: {fileID: 4881754948605126717}
   - component: {fileID: 7639078267393392259}
+  - component: {fileID: 270353148268175636}
   m_Layer: 0
   m_Name: Glass_Block_Sheet_37
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d8d124b0ce07b4044a2ba407b27b8f0a, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 74d719bdec0dc754e8844fe17ee92bd7, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_Size: {x: 2.07, y: 0.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &424476546373514525
@@ -118,7 +119,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &4775134428725146983
+--- !u!60 &-2201857938020319925
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,20 +156,83 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.07, y: 0.22}
+    newSize: {x: 2.07, y: 0.22}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: -1.035, y: 0.11}
+      - {x: -1.035, y: -0.11}
+      - {x: 1.035, y: -0.11}
+      - {x: 1.035, y: 0.11}
+    - - {x: -0.705, y: -0.02}
+      - {x: -0.695, y: -0.03}
+      - {x: -0.695, y: -0.02}
+      - {x: -0.755, y: -0.03}
+      - {x: -0.745, y: -0.04}
+    - - {x: -0.585, y: -0.03}
+      - {x: -0.525, y: -0.03}
+      - {x: -0.515, y: -0.02}
+      - {x: -0.445, y: -0.02}
+      - {x: -0.42499998, y: -0.01}
+      - {x: -0.405, y: -0.03}
+      - {x: -0.60499996, y: -0.03}
+      - {x: -0.59499997, y: -0.04}
+    - - {x: -0.33499998, y: -0.01}
+      - {x: -0.36499998, y: 0.03}
+      - {x: -0.325, y: 0.01}
+      - {x: -0.295, y: 0}
+      - {x: -0.295, y: 0.01}
+      - {x: -0.325, y: 0}
+      - {x: -0.33499998, y: -0.02}
+      - {x: -0.345, y: -0.03}
+      - {x: -0.33499998, y: -0.02}
+    - - {x: 0.275, y: 0.01}
+      - {x: 0.285, y: 0.03}
+      - {x: 0.345, y: 0.03}
+      - {x: 0.385, y: -0.01}
+      - {x: 0.385, y: 0}
+      - {x: 0.355, y: 0}
+      - {x: 0.325, y: -0.02}
+      - {x: 0.275, y: -0.02}
+    - - {x: -0.885, y: -0.02}
+      - {x: -0.835, y: 0}
+      - {x: -0.84499997, y: -0.01}
+      - {x: -0.905, y: -0.02}
+      - {x: -0.895, y: -0.03}
+    - - {x: 0.505, y: 0.03}
+      - {x: 0.48499998, y: 0.03}
+      - {x: 0.45499998, y: 0.04}
+      - {x: 0.465, y: 0.03}
+      - {x: 0.48499998, y: 0.049999997}
+      - {x: 0.685, y: 0.049999997}
+      - {x: 0.675, y: 0.06}
+      - {x: 0.565, y: 0}
+      - {x: 0.555, y: 0.01}
+    - - {x: -0.105, y: 0.02}
+      - {x: -0.145, y: 0.04}
+      - {x: -0.175, y: 0.03}
+      - {x: -0.13499999, y: 0.02}
+      - {x: -0.125, y: 0.03}
+      - {x: -0.035, y: 0.01}
+      - {x: -0.005, y: 0.01}
+      - {x: -0.015, y: 0.02}
+      - {x: -0.024999999, y: 0.01}
+      - {x: -0.074999996, y: 0.02}
+    - - {x: 0.114999995, y: 0.03}
+      - {x: 0.105, y: 0.04}
+      - {x: 0.074999996, y: 0.04}
+      - {x: 0.205, y: 0.03}
+      - {x: 0.195, y: 0.02}
+      - {x: 0.16499999, y: 0.03}
+    - - {x: 0.805, y: 0.049999997}
+      - {x: 0.905, y: 0.049999997}
+      - {x: 0.84499997, y: 0.049999997}
+      - {x: 0.835, y: 0.06}
   m_UseDelaunayMesh: 0
 --- !u!114 &4881754948605126717
 MonoBehaviour:
@@ -182,7 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a349b820ec17f4b9016054d82d515d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleType: 53
+  obstacleType: 85
+  velocityThreshold: 2
 --- !u!114 &7639078267393392259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,5 +258,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 661cff06d78770641989f733374ddda4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &270353148268175636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4972879676824457644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0415a729e5002c0409dfacbc1ecc3c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

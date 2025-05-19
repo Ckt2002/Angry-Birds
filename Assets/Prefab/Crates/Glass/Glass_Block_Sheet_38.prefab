@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 6932491122500201251}
   - component: {fileID: 4280283089066949168}
   - component: {fileID: -3327761921794628671}
-  - component: {fileID: -6627169520134040213}
+  - component: {fileID: -1031877135282613412}
   - component: {fileID: -3819747845125962334}
   - component: {fileID: -3101999100691246620}
+  - component: {fileID: 8912429749191892578}
   m_Layer: 0
   m_Name: Glass_Block_Sheet_38
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 093627e326daa5144a6343ae6c0aa681, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 641b855022205b048ac4c17fb2521b43, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_Size: {x: 2.07, y: 0.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &-3327761921794628671
@@ -118,7 +119,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &-6627169520134040213
+--- !u!60 &-1031877135282613412
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,20 +156,42 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.07, y: 0.22}
+    newSize: {x: 2.07, y: 0.22}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: -1.035, y: 0.11}
+      - {x: -1.035, y: -0.11}
+      - {x: 1.035, y: -0.11}
+      - {x: 1.035, y: 0.11}
+    - - {x: -0.895, y: -0.02}
+      - {x: -0.85499996, y: -0.02}
+      - {x: -0.84499997, y: -0.01}
+      - {x: -0.805, y: -0.01}
+      - {x: -0.715, y: 0}
+      - {x: -0.59499997, y: 0.01}
+      - {x: -0.585, y: 0.02}
+      - {x: -0.13499999, y: 0.02}
+      - {x: -0.125, y: 0.03}
+      - {x: 0.465, y: 0.03}
+      - {x: 0.48499998, y: 0.049999997}
+      - {x: 0.685, y: 0.049999997}
+      - {x: 0.705, y: 0.03}
+      - {x: 0.78499997, y: 0.03}
+      - {x: 0.805, y: 0.049999997}
+      - {x: 0.92499995, y: 0.04}
+      - {x: 0.965, y: 0.04}
+      - {x: 0.935, y: 0.01}
+      - {x: 0.875, y: 0}
+      - {x: 0.78499997, y: -0.01}
+      - {x: 0.775, y: -0.02}
+      - {x: -0.78499997, y: -0.02}
+      - {x: -0.79499996, y: -0.01}
   m_UseDelaunayMesh: 0
 --- !u!114 &-3819747845125962334
 MonoBehaviour:
@@ -182,7 +205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a349b820ec17f4b9016054d82d515d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleType: 54
+  obstacleType: 86
+  velocityThreshold: 2
 --- !u!114 &-3101999100691246620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,5 +217,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 661cff06d78770641989f733374ddda4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8912429749191892578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8052203450504905199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0415a729e5002c0409dfacbc1ecc3c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

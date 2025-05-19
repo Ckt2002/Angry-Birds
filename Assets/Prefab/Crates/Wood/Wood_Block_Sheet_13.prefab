@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -2951218843524060367}
   m_Layer: 0
   m_Name: Wood_Block_Sheet_13
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 34f7b746db90fe44ca47c24049977e68, type: 2}
+  m_Sprite: {fileID: 21300000, guid: cb3c3bfe102872c4b8dd31d1f4fad378, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_Size: {x: 0.78, y: 0.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &-6571629681848772617
@@ -155,20 +155,29 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.78, y: 0.77}
+    newSize: {x: 0.78, y: 0.77}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: 0.38, y: 0.155}
+      - {x: 0.31, y: 0.265}
+      - {x: 0.14999999, y: 0.375}
+      - {x: -0.099999994, y: 0.375}
+      - {x: -0.26, y: 0.315}
+      - {x: -0.39, y: 0.145}
+      - {x: -0.39, y: -0.145}
+      - {x: -0.34, y: -0.225}
+      - {x: -0.21, y: -0.355}
+      - {x: -0.12, y: -0.385}
+      - {x: 0.13, y: -0.385}
+      - {x: 0.19999999, y: -0.355}
+      - {x: 0.39, y: -0.175}
+      - {x: 0.39, y: 0.074999996}
   m_UseDelaunayMesh: 0
 --- !u!114 &5170619344248454613
 MonoBehaviour:
@@ -183,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleType: 13
-  velocityThreshold: 1.9
+  velocityThreshold: 3
 --- !u!114 &-2951218843524060367
 MonoBehaviour:
   m_ObjectHideFlags: 0

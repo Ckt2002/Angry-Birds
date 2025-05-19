@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 3263133635427929293}
   - component: {fileID: 8405432260239621092}
   - component: {fileID: -7711637304694367177}
-  - component: {fileID: 5805303352876098169}
+  - component: {fileID: 6567115907608268476}
   - component: {fileID: 8023215246456903374}
   - component: {fileID: -1636945992256698943}
+  - component: {fileID: -7755449071288673614}
   m_Layer: 0
   m_Name: Glass_Block_Sheet_16
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 24f4315941b02f54da745241ab4d67a7, type: 2}
+  m_Sprite: {fileID: 21300000, guid: ddb312f985e5ce64b978848c507291fb, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_Size: {x: 0.73, y: 0.74}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &-7711637304694367177
@@ -118,7 +119,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &5805303352876098169
+--- !u!60 &6567115907608268476
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,20 +156,60 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.73, y: 0.74}
+    newSize: {x: 0.73, y: 0.74}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: -0.125, y: 0.37}
+      - {x: -0.195, y: 0.34}
+      - {x: -0.355, y: 0.17}
+      - {x: -0.36499998, y: 0.14999999}
+      - {x: -0.36499998, y: -0.14999999}
+      - {x: -0.235, y: -0.32}
+      - {x: -0.155, y: -0.37}
+      - {x: 0.235, y: -0.37}
+      - {x: 0.36499998, y: -0.14999999}
+      - {x: 0.36499998, y: 0.22}
+      - {x: 0.195, y: 0.37}
+    - - {x: -0.105, y: -0.29999998}
+      - {x: -0.185, y: -0.25}
+      - {x: -0.235, y: -0.21}
+      - {x: -0.235, y: -0.19999999}
+      - {x: -0.275, y: -0.14999999}
+      - {x: -0.315, y: -0.07}
+      - {x: -0.315, y: 0.07}
+      - {x: -0.305, y: 0.08}
+      - {x: -0.235, y: 0.21}
+      - {x: -0.24499999, y: 0.19}
+      - {x: -0.195, y: 0.14}
+      - {x: -0.095, y: 0.14}
+      - {x: -0.065, y: 0.14999999}
+      - {x: 0.005, y: 0.17999999}
+      - {x: 0.065, y: 0.25}
+      - {x: 0.065, y: 0.29999998}
+      - {x: 0.044999998, y: 0.32}
+      - {x: 0.105, y: 0.29999998}
+      - {x: 0.155, y: 0.28}
+      - {x: 0.195, y: 0.25}
+      - {x: 0.24499999, y: 0.21}
+      - {x: 0.24499999, y: 0.19999999}
+      - {x: 0.275, y: 0.16}
+      - {x: 0.295, y: 0.11}
+      - {x: 0.305, y: 0.099999994}
+      - {x: 0.305, y: -0.06}
+      - {x: 0.295, y: -0.07}
+      - {x: 0.275, y: -0.13}
+      - {x: 0.255, y: -0.16}
+      - {x: 0.24499999, y: -0.19}
+      - {x: 0.155, y: -0.28}
+      - {x: 0.074999996, y: -0.31}
+      - {x: -0.024999999, y: -0.32}
+      - {x: -0.035, y: -0.31}
   m_UseDelaunayMesh: 0
 --- !u!114 &8023215246456903374
 MonoBehaviour:
@@ -182,7 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a349b820ec17f4b9016054d82d515d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleType: 32
+  obstacleType: 64
+  velocityThreshold: 2
 --- !u!114 &-1636945992256698943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,5 +235,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 661cff06d78770641989f733374ddda4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7755449071288673614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5567151354330271907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0415a729e5002c0409dfacbc1ecc3c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

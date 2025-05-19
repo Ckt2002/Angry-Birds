@@ -5,6 +5,7 @@ using UnityEngine;
 public class CreateLevelManagerFile : MonoBehaviour
 {
     [SerializeField] private int maxLevel = 10;
+    [SerializeField] bool lockAllLevel = true;
 
     [ContextMenu("Create level manager file")]
     public void CreateFile()
@@ -16,17 +17,18 @@ public class CreateLevelManagerFile : MonoBehaviour
 
         for (int i = 1; i < maxLevel; i++)
         {
-            level.levelDataArr[i] = CreateLevelData(i + 1);
+            level.levelDataArr[i] = CreateLevelData(i + 1, lockAllLevel);
         }
 
         var json = JsonUtility.ToJson(level, true);
+        Debug.Log(json);
         var fileName = $"Level manager.json";
         string directoryPath = Path.Combine(Application.dataPath, "Data", "Level Manager");
         string fullPath = Path.Combine(directoryPath, fileName);
         SaveToFile(json, fullPath);
     }
 
-    private LevelData CreateLevelData(int level, bool isLocked = true)
+    private LevelData CreateLevelData(int level, bool isLocked)
     {
         return new LevelData
         {
