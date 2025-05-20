@@ -7,17 +7,17 @@
         },
         {
             "Level": 2,
-            "StarNumber": 2,
+            "StarNumber": 3,
             "IsLocked": false
         },
         {
             "Level": 3,
-            "StarNumber": 3,
+            "StarNumber": 2,
             "IsLocked": false
         },
         {
             "Level": 4,
-            "StarNumber": 3,
+            "StarNumber": 2,
             "IsLocked": false
         },
         {
@@ -32,7 +32,7 @@
         },
         {
             "Level": 7,
-            "StarNumber": 1,
+            "StarNumber": 2,
             "IsLocked": false
         },
         {
@@ -42,12 +42,12 @@
         },
         {
             "Level": 9,
-            "StarNumber": 2,
+            "StarNumber": 3,
             "IsLocked": false
         },
         {
             "Level": 10,
-            "StarNumber": 1,
+            "StarNumber": 2,
             "IsLocked": false
         }
     ]

@@ -5,6 +5,8 @@ public class TripleBird : BirdController
 {
     [SerializeField] private float spreadAngle = 30f;
     [SerializeField] private float splitForce = 2f;
+    public bool isSkillBird { get; set; } = false;
+
     protected override void SpecialSkill()
     {
         var baseVelocity = rb2D.linearVelocity;
@@ -13,17 +15,18 @@ public class TripleBird : BirdController
         soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.BirdSkill);
         anim?.RunSpecialSkill();
 
-        var bird1 = CreateBird(spreadAngle, baseVelocity);
-        var bird2 = CreateBird(-spreadAngle, baseVelocity);
+        TripleBird bird1 = CreateBird(spreadAngle, baseVelocity);
+        TripleBird bird2 = CreateBird(-spreadAngle, baseVelocity);
+        bird1.isSkillBird = bird2.isSkillBird = true;
 
         Physics2D.IgnoreCollision(bird1.GetComponent<Collider2D>(), bird2.GetComponent<Collider2D>(), true);
 
         StartCoroutine(ResetCollider(bird1, bird2));
     }
 
-    private BirdController CreateBird(float angle, Vector2 baseVelocity)
+    private TripleBird CreateBird(float angle, Vector2 baseVelocity)
     {
-        var bird = BirdPoolingSystem.Instance.GetBirdPool(birdType);
+        var bird = BirdPoolingSystem.Instance.GetBirdPool(birdType) as TripleBird;
         bird.transform.position = transform.position;
         bird.gameObject.SetActive(true);
         bird.skillActive = true;
@@ -55,5 +58,22 @@ public class TripleBird : BirdController
         {
             Physics2D.IgnoreCollision(bird1.GetComponent<Collider2D>(), bird2.GetComponent<Collider2D>(), false);
         }
+    }
+
+    protected override void OnCollisionEnter2D(Collision2D other)
+    {
+        if (launched && !other.gameObject.CompareTag(nameof(ETags.Player)))
+        {
+            if (!isSkillBird)
+                stateMachine.ChangeState(new BirdColliedState(this, anim, name, soundManager));
+            else
+                stateMachine.ChangeState(new TripleSkillColliedState(this, anim, name, soundManager));
+        }
+    }
+
+    protected override void Reset()
+    {
+        base.Reset();
+        isSkillBird = false;
     }
 }

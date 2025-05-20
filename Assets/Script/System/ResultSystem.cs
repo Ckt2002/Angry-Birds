@@ -69,7 +69,9 @@ public class ResultSystem : MonoBehaviour
         var currentLevel = LevelSystem.Instance.GetLevel;
         var lst = LoadLevelManager.Instance.levelManagerData.levelDataArr;
 
-        lst[currentLevel - 1].StarNumber = resultStar;
+        if (lst[currentLevel - 1].StarNumber < resultStar)
+            lst[currentLevel - 1].StarNumber = resultStar;
+
         // Unlock next level
         if (currentLevel < GameStat.Instance.maxLevel)
             lst[currentLevel].IsLocked = false;

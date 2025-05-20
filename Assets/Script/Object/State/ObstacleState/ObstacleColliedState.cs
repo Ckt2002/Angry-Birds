@@ -7,6 +7,7 @@ public class ObstacleColliedState : IObstacleState
     private ParticlePoolingSystem particlePoolingSystem;
     private SoundManager soundManager;
     private string particleName;
+    private Coroutine coroutine;
 
     public ObstacleColliedState(ObstacleController obstacleController
         , SoundManager soundManager, string particleName)
@@ -19,7 +20,7 @@ public class ObstacleColliedState : IObstacleState
 
     public void Enter()
     {
-        obstacleController.StartCoroutine(DestroyStatus());
+        coroutine = obstacleController.StartCoroutine(DestroyStatus());
     }
 
     private IEnumerator DestroyStatus()
@@ -36,6 +37,11 @@ public class ObstacleColliedState : IObstacleState
 
     public void Exit()
     {
+        if (coroutine != null && obstacleController != null)
+        {
+            obstacleController.StopCoroutine(coroutine);
+            coroutine = null;
+        }
         obstacleController = null;
         particlePoolingSystem = null;
         soundManager = null;

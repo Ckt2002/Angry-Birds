@@ -64,13 +64,13 @@ public abstract class BirdController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    protected virtual void OnCollisionEnter2D(Collision2D other)
     {
         if (launched && !other.gameObject.CompareTag(nameof(ETags.Player)))
             stateMachine.ChangeState(new BirdColliedState(this, anim, name, soundManager));
     }
 
-    protected void Reset()
+    protected virtual void Reset()
     {
         name = gameObject.name.Replace("(Clone)", "");
         rb2D.bodyType = RigidbodyType2D.Kinematic;

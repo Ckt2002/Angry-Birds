@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5529114505642119377}
   - component: {fileID: -3137879383782358506}
   - component: {fileID: -2397114331594597219}
-  - component: {fileID: 6106629410734490672}
   - component: {fileID: -7823075305656328036}
+  - component: {fileID: 6106629410734490672}
   m_Layer: 0
   m_Name: Black
   m_TagString: Player
@@ -174,18 +174,6 @@ PolygonCollider2D:
       - {x: 0.22999999, y: 0.044999998}
       - {x: 0.22, y: 0.095}
   m_UseDelaunayMesh: 0
---- !u!114 &6106629410734490672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6926672378523344832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4650d9bb449d4a9f897f220d1cdc5a3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-7823075305656328036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,3 +192,15 @@ MonoBehaviour:
   rb2D: {fileID: 0}
   explodeRange: 3
   explosionForce: 10
+--- !u!114 &6106629410734490672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6926672378523344832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4650d9bb449d4a9f897f220d1cdc5a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class BirdColliedState : IBirdState
+public class TripleSkillColliedState : IBirdState
 {
     private BirdController bird;
     private Coroutine coroutine;
@@ -10,7 +10,7 @@ public class BirdColliedState : IBirdState
     private string name;
     private SoundManager soundManager;
 
-    public BirdColliedState(BirdController bird, IBirdAnim anim
+    public TripleSkillColliedState(BirdController bird, IBirdAnim anim
         , string name, SoundManager soundManager)
     {
         this.bird = bird;
@@ -40,8 +40,6 @@ public class BirdColliedState : IBirdState
         var particle = particlePoolingSystem?.GetParticle(name);
         particle?.RunParticle(go.transform.position);
         yield return new WaitForSeconds(3f);
-        ObjectsActivation.Instance.BirdsNumReduce();
-        ResultSystem.Instance.CheckResult();
         particle?.RunParticle(go.transform.position);
         soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.BirdDestroy);
         go.SetActive(false);

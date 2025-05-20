@@ -191,7 +191,7 @@ MonoBehaviour:
   birdType: 2
   rb2D: {fileID: 0}
   spreadAngle: 15
-  splitForce: 2
+  splitForce: 1.3
 --- !u!114 &6106629410734490672
 MonoBehaviour:
   m_ObjectHideFlags: 0
