@@ -12,43 +12,43 @@
         },
         {
             "Level": 3,
-            "StarNumber": 0,
+            "StarNumber": 3,
             "IsLocked": false
         },
         {
             "Level": 4,
-            "StarNumber": 0,
-            "IsLocked": true
+            "StarNumber": 3,
+            "IsLocked": false
         },
         {
             "Level": 5,
-            "StarNumber": 0,
-            "IsLocked": true
+            "StarNumber": 3,
+            "IsLocked": false
         },
         {
             "Level": 6,
-            "StarNumber": 0,
-            "IsLocked": true
+            "StarNumber": 2,
+            "IsLocked": false
         },
         {
             "Level": 7,
-            "StarNumber": 0,
-            "IsLocked": true
+            "StarNumber": 1,
+            "IsLocked": false
         },
         {
             "Level": 8,
-            "StarNumber": 0,
-            "IsLocked": true
+            "StarNumber": 3,
+            "IsLocked": false
         },
         {
             "Level": 9,
-            "StarNumber": 0,
-            "IsLocked": true
+            "StarNumber": 2,
+            "IsLocked": false
         },
         {
             "Level": 10,
-            "StarNumber": 0,
-            "IsLocked": true
+            "StarNumber": 1,
+            "IsLocked": false
         }
     ]
 }

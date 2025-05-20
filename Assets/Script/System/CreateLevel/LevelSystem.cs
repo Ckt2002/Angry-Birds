@@ -37,4 +37,12 @@ public class LevelSystem : MonoBehaviour
         this.level = level;
         LoadLevel();
     }
+
+
+
+    [ContextMenu("Load map")]
+    public void LoadLevelForEditor()
+    {
+        _ = LoadLevelData.Instance.LoadLevelDataAsync(level);
+    }
 }

@@ -33,7 +33,7 @@ public class EnemyColliedState : IEnemyState
     {
         var go = enemyController.gameObject;
         var particle = particlePoolingSystem?.GetParticle(EnemyNames.Pig);
-        particle.RunParticle(enemyController.transform.position);
+        particle?.RunParticle(enemyController.transform.position);
         soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.PigDamage);
         yield return new WaitForSeconds(0.1f);
 

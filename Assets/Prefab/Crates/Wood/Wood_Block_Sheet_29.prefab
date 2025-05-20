@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleType: 28
-  velocityThreshold: 3
+  velocityThreshold: 5
 --- !u!114 &1446723751983758894
 MonoBehaviour:
   m_ObjectHideFlags: 0

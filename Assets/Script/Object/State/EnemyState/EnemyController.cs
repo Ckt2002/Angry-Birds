@@ -4,6 +4,8 @@ public class EnemyController : MonoBehaviour
 {
     public EEnemyType enemyType;
 
+    [SerializeField] private float velocityThreshold = 5f;
+
     private EnemyStateMachine stateMachine;
     private Rigidbody2D rb2D;
     private SoundManager soundManager;
@@ -23,7 +25,7 @@ public class EnemyController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.relativeVelocity.magnitude >= GameStat.Instance.velocityThreshold)
+        if (other.relativeVelocity.magnitude >= velocityThreshold)
             stateMachine?.ChangeState(new EnemyColliedState(this, soundManager, objectsActivation));
     }
 

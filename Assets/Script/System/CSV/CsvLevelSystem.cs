@@ -27,7 +27,8 @@ public class CsvLevelSystem : MonoBehaviour
             string[] values = birdsStr.Split(' ');
             byte level = byte.Parse(values[0]);
 
-            ResultSystem.Instance.SetResultRequires(int.Parse(values[1]), int.Parse(values[2]), int.Parse(values[3]));
+            ResultSystem.Instance.SetResultRequires(
+                int.Parse(values[1]), int.Parse(values[2]), int.Parse(values[3]));
 
             var birdsQueue = new byte[values.Length - 5];
             for (int j = 5; j < values.Length; j++)

@@ -9721,6 +9721,7 @@ GameObject:
   - component: {fileID: 1317802468}
   - component: {fileID: 1317802469}
   - component: {fileID: 1317802470}
+  - component: {fileID: 1317802471}
   m_Layer: 0
   m_Name: Tools
   m_TagString: Untagged
@@ -9789,6 +9790,34 @@ MonoBehaviour:
   screenshotFolder: Assets/Screenshots
   screenshotPrefix: Screenshot_
   superSize: 1
+--- !u!114 &1317802471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317802466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c96f9febf138dc64f9e394ad94ae8c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelFiles:
+  - {fileID: 4900000, guid: 82dc9fb4557e0d743bb929cdc49520c3, type: 3}
+  - {fileID: 4900000, guid: b0a65d423bf37ac4bb12e9e01f705697, type: 3}
+  - {fileID: 4900000, guid: c260a43ab77a38440b589a97461928a0, type: 3}
+  - {fileID: 4900000, guid: a95848a3d69c35e44a8047f173c88169, type: 3}
+  - {fileID: 4900000, guid: 374cbd9b9b03f854290a557a135a1938, type: 3}
+  - {fileID: 4900000, guid: f396c1b656cc727449a9cf6a79076759, type: 3}
+  - {fileID: 4900000, guid: 6b4bcd585b3f0b9419eae019cdde10c3, type: 3}
+  - {fileID: 4900000, guid: 12b92dfad8565014fa587a98a0a02569, type: 3}
+  - {fileID: 4900000, guid: 29d86446a22e40742bd8e340b0f48aa6, type: 3}
+  - {fileID: 4900000, guid: 65683fbf41845294f9cc4fd96a8b352f, type: 3}
+  level: 10
+  obstaclesObj: {fileID: 11400000, guid: 330afed7b4455db46a696cfac2c2c808, type: 2}
+  enemiesObj: {fileID: 11400000, guid: 1b3f2133f95f98043a85096e686ce3c3, type: 2}
+  obstacleParent: {fileID: 2085984781}
+  enemyParent: {fileID: 1793023732}
 --- !u!1001 &1327692848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10586,7 +10615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1428446773
 RectTransform:
   m_ObjectHideFlags: 0

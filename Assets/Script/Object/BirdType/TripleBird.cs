@@ -11,7 +11,7 @@ public class TripleBird : BirdController
         var particle = ParticlePoolingSystem.Instance.GetParticle(name);
         particle?.RunParticle(transform.position);
         soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.BirdSkill);
-        anim.RunSpecialSkill();
+        anim?.RunSpecialSkill();
 
         var bird1 = CreateBird(spreadAngle, baseVelocity);
         var bird2 = CreateBird(-spreadAngle, baseVelocity);

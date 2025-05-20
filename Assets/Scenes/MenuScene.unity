@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocityThreshold: 1.9
-  maxLevel: 3
+  maxLevel: 10
 --- !u!114 &594501099
 MonoBehaviour:
   m_ObjectHideFlags: 0

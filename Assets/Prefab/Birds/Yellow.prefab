@@ -190,7 +190,7 @@ MonoBehaviour:
   launched: 0
   birdType: 1
   rb2D: {fileID: 0}
-  speedSkill: 5
+  speedSkill: 2
 --- !u!114 &6106629410734490672
 MonoBehaviour:
   m_ObjectHideFlags: 0

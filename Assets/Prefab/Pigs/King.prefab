@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 5
+  velocityThreshold: 8
 --- !u!114 &936459652654538829
 MonoBehaviour:
   m_ObjectHideFlags: 0
