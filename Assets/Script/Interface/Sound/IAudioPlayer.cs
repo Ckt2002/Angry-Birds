@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public interface IAudioPlayer
 {
     void PlayOneShot(int clipIndex);
@@ -5,4 +7,5 @@ public interface IAudioPlayer
     void Stop();
     void SetLoop(bool isLoop);
     void SetVolume(float volume);
+    AudioSource GetAudio();
 }

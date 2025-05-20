@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 
 public class ResultSystem : MonoBehaviour
@@ -72,5 +73,14 @@ public class ResultSystem : MonoBehaviour
         // Unlock next level
         if (currentLevel < GameStat.Instance.maxLevel)
             lst[currentLevel].IsLocked = false;
+
+        // Write to file
+        var levelData = LoadLevelManager.Instance.levelManagerData;
+
+        var json = JsonUtility.ToJson(levelData, true);
+        var fileName = $"Level manager.json";
+        string directoryPath = Path.Combine(Application.dataPath, "Data", "Level Manager");
+        string fullPath = Path.Combine(directoryPath, fileName);
+        File.WriteAllText(fullPath, json);
     }
 }

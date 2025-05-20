@@ -21,7 +21,6 @@ public class CreateLevelManagerFile : MonoBehaviour
         }
 
         var json = JsonUtility.ToJson(level, true);
-        Debug.Log(json);
         var fileName = $"Level manager.json";
         string directoryPath = Path.Combine(Application.dataPath, "Data", "Level Manager");
         string fullPath = Path.Combine(directoryPath, fileName);

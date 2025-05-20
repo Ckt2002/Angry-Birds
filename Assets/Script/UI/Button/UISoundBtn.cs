@@ -8,6 +8,33 @@ public class UISoundBtn : UIButton, IPointerEnterHandler, IPointerExitHandler, I
     [SerializeField] private Image hideImg;
     private bool soundOn = true;
 
+    private void OnEnable()
+    {
+        if (soundManager == null)
+            return;
+        InInitialization();
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+        InInitialization();
+    }
+
+    private void InInitialization()
+    {
+
+        var volume = soundManager.GetSystemAudio().volume;
+        soundOn = volume > 0;
+
+        var fadeValue = 1 - volume;
+        fadeValue = Mathf.Min(fadeValue, 0.5f);
+
+        var color = hideImg.color;
+        color.a = fadeValue;
+        hideImg.color = color;
+    }
+
     public override void Action()
     {
         base.Action();
@@ -17,6 +44,7 @@ public class UISoundBtn : UIButton, IPointerEnterHandler, IPointerExitHandler, I
         soundOn = !soundOn;
         soundManager.SetSystemAudioVolume(volume);
         soundManager.SetUIAudioVolume(volume);
+        soundManager.SetSFXVolume(volume);
 
         var fadeValue = 1 - volume;
         fadeValue = Mathf.Min(fadeValue, 0.5f);

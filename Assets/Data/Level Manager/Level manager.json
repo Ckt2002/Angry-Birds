@@ -2,18 +2,18 @@
     "levelDataArr": [
         {
             "Level": 1,
-            "StarNumber": 0,
+            "StarNumber": 3,
             "IsLocked": false
         },
         {
             "Level": 2,
-            "StarNumber": 0,
-            "IsLocked": true
+            "StarNumber": 2,
+            "IsLocked": false
         },
         {
             "Level": 3,
             "StarNumber": 0,
-            "IsLocked": true
+            "IsLocked": false
         },
         {
             "Level": 4,

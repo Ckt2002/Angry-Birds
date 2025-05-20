@@ -10,6 +10,10 @@ public class UILoadSceneBtn : UIButton, IPointerEnterHandler, IPointerExitHandle
     {
         base.Action();
         SceneSystem.Instance?.LoadScene((int)sceneToLoad);
+        if (sceneToLoad == EScene.MenuScene)
+            SoundManager.Instance.PlaySystemAudio((int)ESystemAudioClip.Theme, true);
+        else
+            SoundManager.Instance.StopSystemAudio();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

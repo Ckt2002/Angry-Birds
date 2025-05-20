@@ -7,6 +7,7 @@ public class EnemyColliedState : IEnemyState
     private ParticlePoolingSystem particlePoolingSystem;
     private ObjectsActivation objectsActivation;
     private SoundManager soundManager;
+    private Coroutine coroutine;
 
     public EnemyColliedState(EnemyController enemyController
         , SoundManager soundManager, ObjectsActivation objectsActivation)
@@ -25,7 +26,7 @@ public class EnemyColliedState : IEnemyState
         if (objectsActivation == null)
             objectsActivation = ObjectsActivation.Instance;
 
-        enemyController.StartCoroutine(DieStatus());
+        coroutine = enemyController.StartCoroutine(DieStatus());
     }
 
     private IEnumerator DieStatus()
@@ -47,6 +48,12 @@ public class EnemyColliedState : IEnemyState
 
     public void Exit()
     {
+        if (coroutine != null && enemyController != null)
+        {
+            enemyController.StopCoroutine(coroutine);
+            coroutine = null;
+        }
+
         enemyController = null;
         particlePoolingSystem = null;
         objectsActivation = null;

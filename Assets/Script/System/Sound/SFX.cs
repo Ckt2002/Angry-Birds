@@ -30,4 +30,9 @@ public class SFX : MonoBehaviour, IAudioPlayer
     {
         audioSource.volume = volume;
     }
+
+    public AudioSource GetAudio()
+    {
+        return audioSource;
+    }
 }

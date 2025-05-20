@@ -27,6 +27,12 @@ public class SoundSystem : MonoBehaviour, IAudioPlayer
 
     public void Play(int clipIndex)
     {
-        throw new System.NotImplementedException();
+        audioSource.clip = audioClips[clipIndex];
+        audioSource.Play();
+    }
+
+    public AudioSource GetAudio()
+    {
+        return audioSource;
     }
 }

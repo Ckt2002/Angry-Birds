@@ -29,4 +29,9 @@ public class SoundUI : MonoBehaviour, IAudioPlayer
     {
         throw new System.NotImplementedException();
     }
+
+    public AudioSource GetAudio()
+    {
+        return audioSource;
+    }
 }

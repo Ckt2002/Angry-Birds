@@ -66,7 +66,7 @@ public abstract class BirdController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (launched)
+        if (launched && !other.gameObject.CompareTag(nameof(ETags.Player)))
             stateMachine.ChangeState(new BirdColliedState(this, anim, name, soundManager));
     }
 
