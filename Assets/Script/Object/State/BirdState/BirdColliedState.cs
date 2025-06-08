@@ -28,6 +28,9 @@ public class BirdColliedState : IBirdState
         anim?.RunCollied();
 
         coroutine = bird.StartCoroutine(WaitAndDisable());
+
+        ResultSystem resultSystem = ResultSystem.Instance;
+        resultSystem.StartCoroutine(resultSystem.CheckResult());
     }
 
     public void ExecuteOnce()
@@ -41,7 +44,6 @@ public class BirdColliedState : IBirdState
         particle?.RunParticle(go.transform.position);
         yield return new WaitForSeconds(3f);
         ObjectsActivation.Instance.BirdsNumReduce();
-        ResultSystem.Instance.CheckResult();
         particle?.RunParticle(go.transform.position);
         soundManager.PlaySFXAudioOneShot((int)ESFXAudioClip.BirdDestroy);
         go.SetActive(false);

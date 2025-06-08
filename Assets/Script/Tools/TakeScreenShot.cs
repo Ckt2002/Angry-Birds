@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.IO;
 using UnityEngine;
 
@@ -34,3 +35,4 @@ public class TakeScreenShot : MonoBehaviour
     }
 
 }
+#endif

@@ -1,10 +1,8 @@
-
+#if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
 using UnityEngine;
 
 public class LoadMapTool : MonoBehaviour
@@ -104,3 +102,4 @@ public class LoadMapTool : MonoBehaviour
         }
     }
 }
+#endif

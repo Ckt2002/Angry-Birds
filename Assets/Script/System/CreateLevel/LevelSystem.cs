@@ -38,8 +38,6 @@ public class LevelSystem : MonoBehaviour
         LoadLevel();
     }
 
-
-
     [ContextMenu("Load map")]
     public void LoadLevelForEditor()
     {

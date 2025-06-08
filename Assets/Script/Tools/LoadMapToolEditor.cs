@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(LoadMapTool))]
@@ -21,3 +22,4 @@ public class LoadMapToolEditor : Editor
         }
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System;
 using System.IO;
 using UnityEngine;
@@ -42,10 +43,7 @@ public class CreateLevelManagerFile : MonoBehaviour
         try
         {
             File.WriteAllText(fullPath, json);
-
-#if UNITY_EDITOR
             UnityEditor.AssetDatabase.Refresh();
-#endif
 
             Debug.Log($"Level manager saved successfully to: {fullPath}");
         }
@@ -55,3 +53,4 @@ public class CreateLevelManagerFile : MonoBehaviour
         }
     }
 }
+#endif

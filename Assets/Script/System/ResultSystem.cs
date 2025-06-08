@@ -1,3 +1,4 @@
+using System.Collections;
 using System.IO;
 using UnityEngine;
 
@@ -31,8 +32,9 @@ public class ResultSystem : MonoBehaviour
         requireFullStar = fullStar;
     }
 
-    public void CheckResult()
+    public IEnumerator CheckResult()
     {
+        yield return new WaitForSeconds(5f);
         if (objectsActivation.enemiesRemain > 0)
         {
             if (objectsActivation.birdsRemain == 0)
@@ -81,8 +83,8 @@ public class ResultSystem : MonoBehaviour
 
         var json = JsonUtility.ToJson(levelData, true);
         var fileName = $"Level manager.json";
-        string directoryPath = Path.Combine(Application.dataPath, "Data", "Level Manager");
-        string fullPath = Path.Combine(directoryPath, fileName);
+        //string directoryPath = Path.Combine(Application.persistentDataPath);
+        string fullPath = Path.Combine(Application.persistentDataPath, fileName);
         File.WriteAllText(fullPath, json);
     }
 }
